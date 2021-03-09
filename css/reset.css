@@ -4,13 +4,20 @@
    box-sizing: border-box;
 }
 
-ul, li { 
+ul, ol, li { 
    list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
 a { 
+   outline: none;
+}
+
+a:link {
+   font-size: 1rem;
+   color: #000;
    text-decoration: none;
-   cursor: pointer;
 }
 
 div, ul, li {

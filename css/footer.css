@@ -1,0 +1,175 @@
+/* 네이버 하단 내용 CSS */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(249, 249, 249); 
+}
+
+.footer_wrap {
+    width: 100%;
+    max-width: 1476px;
+    padding: 50px 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_left img {
+    width: 164px;
+    height: 18px;
+}
+
+.footer_right button {
+    display: inline-block;
+    width: 155px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    padding: 0 14px;
+    border-radius: 5px;
+    background-color: rgb(153, 153, 153);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_right button:hover {
+    background-color: rgb(0,0,0);
+}
+
+.footer_right.on button {
+    background-color: rgb(0,0,0);
+}
+
+.footer_right button:after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    background: url(../img/footer_open.png) no-repeat center;
+    background-size: cover;
+    transition: .3s;
+}
+
+.footer_right.on button:after {
+    transform: rotate(45deg);
+}
+
+.footer_btn a img {
+    width: 14px;
+    height: 14px;
+}
+
+.naver_copyright {
+    color: rgb(170, 170, 170);
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    margin: 30px 0 20px;
+}
+.naver_copyright p:last-child {
+    font-family: 'Calibre-webfont', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.naver_etc_link {
+    display: flex;
+}
+.naver_etc {
+    display: flex;
+    margin: 0 57px 10px 0;
+}
+.naver_etc a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    color: rgb(153, 153, 153);
+    transition-duration: 0.3s;
+}
+.naver_etc a:hover {
+    color: rgb(3, 199, 90);
+}
+.naver_etc p:last-child a {
+    margin: 0 0 0 24px;
+}
+.naver_social {
+    display: flex;
+}
+.naver_social li {
+    margin: 0 0 0 24px;
+}
+.naver_social li a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    color: rgb(204, 204, 204);
+    transition-duration: 0.3s;
+}
+.naver_social li a:hover {
+    color: rgb(3, 199, 90);
+}
+
+.footer_right {
+    margin-bottom: 88px;
+    position: relative;
+}
+
+.footer_right ul {
+    display: none;
+    padding: 8px 0;
+    width: 155px;
+    position: absolute;
+    bottom: 70px;
+    text-align: left;
+    border: 1px solid rgb(238,238,238);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.footer_right.on ul {
+    display: inline-block;
+}
+
+.footer_right ul li {
+    position: relative;
+    padding: 6px 14px;
+}
+
+.footer_right ul li a {
+    display: block;
+    font-size: 13px;
+    font-family: 'NanumSquare', 'Noto Sans KR';
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: rgb(30,30,30);
+    transition: .3s;
+}
+
+.footer_right ul li:hover a {
+    color: rgb(3, 199, 90);
+}
+
+.footer_right ul li a:after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: url(../img/outlink_icon.png) no-repeat center;
+    background-size: cover;
+    transition: .3s;
+    opacity: 0;
+}
+
+.footer_right ul li:hover a:after {
+    opacity: 1;
+}
