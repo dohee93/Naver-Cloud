@@ -21,10 +21,12 @@
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/footer.css">
+
+   <script src="js/cloud.js" defer></script>
 </head>
 <body class="fp-viewing">
    <div class="wrap pc cloud">
-      <header>
+      <header id="header">
          <!-- Header Section -->
          <nav class="header_wrap">
             <div class="gnb_logo">
@@ -43,7 +45,7 @@
                         <a href="">클라우드</a>
                     </li>
                     <li class="gnb_menu_item">
-                        <a href="media/index.html">미디어</a>
+                        <a href="">미디어</a>
                     </li>
                     <li class="gnb_menu_item">
                         <a href="">채용<span></span></a>
@@ -79,8 +81,8 @@
       
       <div class="container fullpage-wrapper">
          <!-- section 01 -->
-         <div class="section fp-section fp-table active fp-completely" id="title01" style="height: 174px;">
-            <div class="fp-tableCell" style="height: 174px;">
+         <div class="section fp-section fp-table active fp-completely" id="title01">
+            <div class="fp-tableCell">
                <div class="section-tit">
                   <h2>
                      이미 우리 곁에 깊숙이 자리한
@@ -114,8 +116,7 @@
                      </div>
                   </div>
                   <div class="bottom-btn visible">
-                     <!-- <img src="img/down_arrow.svg" alt=""> -->
-                     <button type="button" class="pc-hide" id="subBtnNextOne_two">
+                     <button type="button" class="mo-hide" id="subBtnNextOne">
                         <span class="hide-txt">scroll down</span>
                      </button>
                   </div>
@@ -306,7 +307,7 @@
                      </div>
                   </div>
                   <div class="bottom-btn visible">
-                     <button type="button" class="pc-hide" id="subBtnNextOne_two">
+                     <button type="button" class="mo-hide" id="subBtnNextOne">
                         <span class="hide-txt">scroll down</span>
                      </button>
                   </div>
@@ -315,7 +316,7 @@
                </div>
             </div>
          </div>
-         <div class="section fp-section fp-table active fp-completely" id="content02" style="height: 575px;">
+         <div class="section fp-section fp-table active fp-completely scroll" id="content02">
             <div class="fp-tableCell">
                <div class="fp-scrollable">
                   <div class="fp-scroller">
@@ -510,8 +511,9 @@
                               </h3>
                               <span>Data Center</span>
                            </div>
+                           
                            <div class="section-03-cont">
-                              <div class="swiper-container swiper-container-fade swiper-container-initialized swiped-container-horizontal" id="skill-slide">
+                              <div class="swiper-container" id="skill-slide">
                                  <ul class="swiper-wrapper">
                                     <li class="swiper-slide">
                                        <img src="img/skill_ing07.jpg" alt="데이터 센터 전경 이미지">
@@ -532,45 +534,46 @@
                                        <img src="img/skill_ing07_5.jpg" alt="데이터 센터 내부 이미지">
                                     </li>
                                  </ul>
-                                 <div class="txt-box">
-                                    <div class="slide-controller">
-                                       <div class="slide-btn-box">
-                                          <div class="swiper-button-prev"></div>
-                                          <div class="swiper-button-next"></div>
-                                       </div>
-                                       <div class="swiper-pagination swiper-pagination-fraction">
-                                          <span class="swiper-pagination-current">1</span>
-                                          /
-                                          <span class="swiper-pagination-total">6</span>
-                                       </div>
+                              </div>   
+                              <div class="txt-box">
+                                 <div class="slide-controller">
+                                    <div class="slide-btn-box">
+                                       <div class="swiper-button-prev"></div>
+                                       <div class="swiper-button-next"></div>
                                     </div>
-                                    <p>
-                                       네이버 클라우드
-                                       <em>
-                                          는
-                                          <br>
-                                          세계적으로 비교해도 부족함 없는 수준의 
-                                          <br>
-                                          데이터 센터 인프라를 직접 구축・운영하고 있습니다. 
-                                          <br>
-                                          <br>
-                                          10만 대가 넘는 서버를 수용할 수 있는 친환경 데이터 센터 ‘각 춘천’에 이어, 
-                                          <br class="tab-hide">
-                                          글로벌 규모의 하이퍼 스케일을 가진 클라우드 데이터 센터 ‘각 세종‘도 
-                                          <br class="tab-hide">
-                                          건립 중입니다. 
-                                          <br>
-                                          <br>
-                                          자연재해에 대비한 설계, 안전한 백업 시스템 등을 기반으로 
-                                          <br class="tab-hide">
-                                          늘 안정적인 클라우드 서비스를 제공하고 있습니다.
-                                       </em>
-                                    </p>
+                                    <div class="swiper-pagination swiper-pagination-fraction">
+                                       <span class="swiper-pagination-current">1</span>
+                                       /
+                                       <span class="swiper-pagination-total">6</span>
+                                    </div>
                                  </div>
-                                 <span class="swiper-notification">
-
-                                 </span>
+                                 <p>
+                                    네이버 클라우드
+                                    <em>
+                                       는
+                                       <br>
+                                       세계적으로 비교해도 부족함 없는 수준의 
+                                       <br>
+                                       데이터 센터 인프라를 직접 구축・운영하고 있습니다. 
+                                       <br>
+                                       <br>
+                                       10만 대가 넘는 서버를 수용할 수 있는 친환경 데이터 센터 ‘각 춘천’에 이어, 
+                                       <br class="tab-hide">
+                                       글로벌 규모의 하이퍼 스케일을 가진 클라우드 데이터 센터 ‘각 세종‘도 
+                                       <br class="tab-hide">
+                                       건립 중입니다. 
+                                       <br>
+                                       <br>
+                                       자연재해에 대비한 설계, 안전한 백업 시스템 등을 기반으로 
+                                       <br class="tab-hide">
+                                       늘 안정적인 클라우드 서비스를 제공하고 있습니다.
+                                    </em>
+                                 </p>
                               </div>
+                              <span class="swiper-notification">
+
+                              </span>
+                              
                            </div>
                         </div>
                         <div class="skill-section s-section" id="s-section-04-box">
@@ -740,7 +743,7 @@
                      </div>
                   </div>
                   <div class="bottom-btn visible">
-                     <button type="button" class="pc-hide" id="subBtnNextThree_two">
+                     <button type="button" class="mo-hide" id="subBtnNextThree">
                         <span class="hide-txt">scroll down</span>
                      </button>
                   </div>
@@ -1022,29 +1025,28 @@
       </div>
       
       <!-- Top Button Section -->
-      <a id="top-btn" class="pc" href="">Top Button</a>
+      <button id="top-btn" class="pc" href="">Top Button</button>
 
       <!-- Section 2 - Small Navigation  -->
-      <div class="small-nav global pd-top visible">
+      <div class="small-nav global pd-top" id="smallNav">
          <ol>
             <li>
-               <a class="pagemove btn10 active">클라우드 서비스</a>
+               <a class="pagemove btn10" onclick="navButton(0);" href="#s-section-01-box">클라우드 서비스</a>
             </li>
             <li>
-               <a class="pagemove btn11">글로벌 리전</a>
+               <a class="pagemove btn11" onclick="navButton(1)" href="#s-section-02-box">글로벌 리전</a>
             </li>
             <li>
-               <a class="pagemove btn12 active">데이터 센터</a>
+               <a class="pagemove btn12" onclick="navButton(2)" href="#s-section-03-box">데이터 센터</a>
             </li>
             <li>
-               <a class="pagemove btn13 active">보안</a>
+               <a class="pagemove btn13" onclick="navButton(3)" href="#s-section-04-box">보안</a>
             </li>
             <li>
-               <a class="pagemove btn14 active">IT 서비스</a>
+               <a class="pagemove btn14" onclick="navButton(4)" href="#s-section-05-box">IT 서비스</a>
             </li>
          </ol>
       </div>
    </div>
-   <script src="js/cloud.js"></script>
 </body>
 </html>

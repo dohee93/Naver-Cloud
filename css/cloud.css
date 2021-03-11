@@ -60,10 +60,10 @@ header {
    padding: 9px 32px;
 }
 
-.sub-header ul li a.active {
+/* .sub-header ul li a.active { */
    /* color: #fff; */
    /* background-color: #03c75a; */
-}
+/* } */
 
 .sub-header ul li a.pc {
    display: block;
@@ -550,63 +550,88 @@ header {
 }
 
 /* Section 02 - 3 */
+#s-section-03-box {
+   border: 2px solid black;
+}
+#s-section-03-box .tit-box {
+   border: 1px solid goldenrod;
+}
 
 .container .skill-cont .skill-section .section-03-cont {
-   font-size: 0;
    margin-top: 60px;
+   border: 1px solid blue;
+   width: 100%;
+   height: 100%;
 }
 
 .swiper-container {
-   margin: 0 auto;
-   position: relative;
+   /* position: relative; */
+   width: 100%;
    overflow: hidden;
-   list-style: none;
-   padding: 0;
-   z-index: 1;
+   border: 1px solid blueviolet;
 }
 
-.swiper-wrapper {
+.swiper-container ul {
+   position: relative;
+   width: 600%;
+   display: flex;
+   
+
+}
+
+.swiper-slide {
    position: relative;
    width: 100%;
-   height: 100%;
-   z-index: 1;
-   /* display: flex; */
-   box-sizing: content-box;
+   height: 636px;
+   overflow: hidden;
+   /* top: 0; */
+   left: 0;
+   
+   /* top: 50%; */
+   /* transform: translateY(-50%); */
+   display: block;
+   border: 1px solid red;
+   background-color: cadetblue;
 }
 
-.swiper-container-fade .swiper-slide {
-   max-width: 1074px;
-   opacity: 1;
-   /* flex-shrink: 0; */
-   height: 100%;
-   position: relative;
-}
-
-.container .skill-cont .skill-section .section-03-cont .swiper-wrapper li img {
+.swiper-slide img {
    width: 100%;
+   height: 636px;
    border-radius: 24px;
+   /* display: inline-block; */
 }
 
-.container .skill-cont .skill-section .section-03-cont .txt-box {
-   font-size: 0;
+
+.section-03-cont .swiper-button-next.disabled,
+.section-03-cont .swiper-button-prev.disabled {
+   opacity: 0.4;
+} 
+
+.swiper-slide.animated {
+   -webkit-transition: left .3s ease-in;
+   transition: left .3s ease-in;
+}
+
+
+.section-03-cont .txt-box {
    width: 50%;
    margin: 36px 0 60px auto;
    text-align: left;
    position: relative;
+   display:block;
+   border: 1px solid springgreen;
 }
 
-.container .skill-cont .skill-section .section-03-cont .slide-controller {
+.section-03-cont .slide-controller {
    position: absolute;
    top: 0;
    left: -100%;
 }
 
-.container .skill-cont .skill-section .section-03-cont .slide-btn-box {
+.section-03-cont .slide-btn-box {
    display: inline-block;
    margin-right: 30px;
-   width: 150px;
-   font-size: 0;
-   
+   width: 150px;   
 }
 
 .container .skill-cont .skill-section .section-03-cont .swiper-button-prev {
@@ -649,7 +674,7 @@ header {
    transition: .3s;
 }
 
-#skill-slide .slide-controller .swiper-pagination-fraction {
+.swiper-pagination-fraction {
    display: inline-block;
    position: relative;
    bottom: auto;
@@ -664,7 +689,7 @@ header {
    z-index: 10;
 }
 
-#skill-slide .slide-controller .swiper-pagination-fraction span {
+.swiper-pagination-fraction span {
    font-size: 18px;
    font-weight: 600;
    line-height: 48px;
@@ -672,12 +697,12 @@ header {
    font-family: 'Calibre-webfont', 'sans-serif';
 }
 
-#skill-slide .slide-controller .swiper-pagination-fraction span.swiper-pagination-total {
+.swiper-pagination-fraction span.swiper-pagination-total {
    padding-left: 34px;
    position: relative;
 }
 
-#skill-slide .slide-controller .swiper-pagination-fraction span.swiper-pagination-total:before {
+.swiper-pagination-fraction span.swiper-pagination-total:before {
    content: '';
    width: 16px;
    height: 1px;
@@ -1027,7 +1052,7 @@ header {
 /* Top Button CSS */
 
 #top-btn {
-   display: block;
+   display: none;
    margin: 0;
    width: 60px;
    height: 60px;
@@ -1047,20 +1072,20 @@ header {
    background-image: url(../img/top_btn_hover.png);
 }
 
-.small-nav {
+#smallNav.small-nav {
    visibility: hidden;
    max-width: 130px;
    min-height: 240px;
    width: 100%;
    height: auto;
-   position: absolute;
+   position: fixed;
    right: auto;
    left: 150px;
    top: 132px;
-   transition: .8s;
-   z-index: 50;
-   /* opacity: 0; */
-   /* animation: .3s moveshide ease-out forwards; */
+   transition: .1s;
+   z-index: 9999;
+   opacity: 0;
+   animation: .3s moveshide ease-out backwards;
 }
 
 .small-nav ol li {
@@ -1090,4 +1115,9 @@ header {
 .small-nav ol li a.active{
    color:#fff;
    background-color:#1e1e1e
+}
+
+#smallNav.small-nav.visible {
+   visibility: visible;
+   opacity: 1;
 }
