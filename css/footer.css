@@ -4,7 +4,6 @@ footer {
     width: 100%;
     height: auto;
     background-color: rgb(249, 249, 249); 
-    margin-top: 500px; /* footer를 아래로 내리기 위해 임의로 설정함 */
 }
 
 .footer_wrap {
@@ -86,7 +85,7 @@ footer {
     display: flex;
     margin: 0 57px 10px 0;
 }
-.naver_etc p a {
+.naver_etc a {
     display: inline-block;
     font-size: 14px;
     font-weight: 700;
