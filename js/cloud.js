@@ -5,6 +5,8 @@ var offset;
 var scrollPos;
 
 
+
+
 if(docHeight != 'undefined') {
    offset = window.innerHeight;
 }
@@ -12,7 +14,8 @@ if(docHeight != 'undefined') {
 var btt = document.getElementById('top-btn');
 
 window.addEventListener('scroll', function() {
-   scrollPos = docElem.scrollTop;
+   var scrollPos = docElem.scrollTop;
+   // console.log(scrollPos);
    btt.style.display = (scrollPos > offset) ? 'block': 'none';
 });
 
@@ -22,6 +25,9 @@ btt.addEventListener('click', function(ev){
    ev.preventDefault();
    scrollToTop();
 });
+
+
+
 
 
 function scrollToTop() {
@@ -37,42 +43,97 @@ function scrollToTop() {
 
 
 // Content02 Slide JS
-var slideWrapper = document.getElementsByClassName('swiper-container'),//.swiper-container
-    sliderContainer = document.getElementsByClassName('swiper-wrapper'),//.swiper-wrapper
-    slides = document.getElementsByClassName('swiper-slide'),//.swiper-slide 배열
-    slideCount = slides.length,//슬라이드 개수
-    currentIndex = 0, //처음인지 마지막인지 순서 구분
-    btnPrev = document.getElementsByClassName('swiper-button-prev'),
-    btnNext = document.getElementsByClassName('swiper-button-next');
 
-//currentIndex = 0 1 2 3 4 5 
-//transitionX() = 0% -16.666667% -33.333333% -50% -66.666667% -83.333333%
-// (100/6*currentIndex)
+var slideWrapper = document.getElementsByClassName('slide-wrap'),
+    slideContainer = document.getElementsByClassName('slide-container'),
+    slides = document.getElementsByClassName('slide'),
+    slideCount = slides.length,
+    currentIndex = 0,
+    animateState = [false, false, false, false, false, false],
+    prevButton = document.querySelector('#slide-button-prev'),
+    nextButton = document.querySelector('#slide-button-next'),
+    pageCurrent = document.querySelector('.slide-pagination-current');
+
+console.log(pageCurrent);
 
 for( var i = 0; i < slideCount; i++){
-   
-   console.log(slides[i].style.left);
-   slides[i].style.left = 100 * i + '%';
-   
-   console.log(slides[i].style.top)
-   
+   slides[i].style.left = i * 100 + '%';
 }
-
 
 function goToSlide(idx) {
-   var xPos = -100 * idx + '%';
-
-   slides[0].style.left = xPos;
-   console.log(xPos);
-   currentIndex = idx;
+   if(idx > -1 && idx < slideCount) {
+      slideContainer[0].style.left = -100 * idx + '%';
+      slides[idx].classList.add('animated');
+      animateState = true;
+      currentIndex = idx;
+      pageCurrent.innerHTML = idx + 1;
+   }
+   for(var i = 0; i < slideCount; i++) {
+      if(i!=idx){
+         slides[i].classList.remove('animated');
+         animateState = false;
+      }
+   }
+   updateNav();
 }
 
-goToSlide(1);
+function updateNav() {
+   if(currentIndex == 0){
+      prevButton.classList.add('disabled');
+   } else {
+      prevButton.classList.remove('disabled');
+   }
+   if(currentIndex == slideCount - 1) {
+      nextButton.classList.add('disabled');
+   } else {
+      nextButton.classList.remove('disabled');
+   }
+}
 
+prevButton.addEventListener('click', function(e){
+   e.preventDefault();
+   goToSlide(currentIndex - 1);
+});
 
-// console.log(sliderContainer);
+nextButton.addEventListener('click', function(e){
+   e.preventDefault();
+   goToSlide(currentIndex + 1);
+});
+
+prevButton.addEventListener('mouseover', function(){
+   if(currentIndex != 0) {
+      prevButton.style.backgroundImage = 'url(img/history_prev_b.png)';
+   }
+});
+prevButton.addEventListener('mouseout', function(){
+   prevButton.style.backgroundImage = 'url(img/history_prev.png)';
+});
+prevButton.addEventListener('mouseup', function(){
+   if(currentIndex == 1){
+      prevButton.style.backgroundImage = 'url(img/history_prev.png)';
+   }
+});
+
+nextButton.addEventListener('mouseover', function(){
+   if(currentIndex != slideCount-1) {
+      nextButton.style.backgroundImage = 'url(img/history_next_b.png)';
+   }
+});
+nextButton.addEventListener('mouseout', function(){
+   nextButton.style.backgroundImage = 'url(img/history_next.png)';
+});
+nextButton.addEventListener('mouseup', function(){
+   if(currentIndex == slideCount - 2){
+      nextButton.style.backgroundImage = 'url(img/history_next.png)';
+   }
+});
+
+goToSlide(0);
+
+// END Content02 Slide JS
 
 // footer Button JS
+
 var footerRight = document.querySelector('.footer_right');
 var familyButton = document.querySelector('#footer_btn');
 
@@ -89,3 +150,4 @@ familyButton.addEventListener('click', () => {
    }
 })
 
+// END footer Button JS
