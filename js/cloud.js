@@ -1,46 +1,36 @@
 // Top Button JS
-var docElem = document.documentElement;
-var docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
-var offset;
-var scrollPos;
 
-
-
+var docElem = document.documentElement,
+   docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight),
+   offset,
+   scrollPos,
+   btt = document.getElementById('top-btn');
 
 if(docHeight != 'undefined') {
    offset = window.innerHeight;
 }
 
-var btt = document.getElementById('top-btn');
-
 window.addEventListener('scroll', function() {
-   var scrollPos = docElem.scrollTop;
-   // console.log(scrollPos);
+   scrollPos = docElem.scrollTop;
    btt.style.display = (scrollPos > offset) ? 'block': 'none';
 });
-
-
 
 btt.addEventListener('click', function(ev){
    ev.preventDefault();
    scrollToTop();
 });
 
-
-
-
-
 function scrollToTop() {
    var scrollInterval = setInterval(function(){ 
       if(scrollPos != 0) {
-         window.scrollBy(1,-250);
+         window.scrollBy(0,-100);
       } else {
          clearInterval(scrollInterval);
       }
    }, 15);
 }
 
-
+// ----- END Top Button JS ----
 
 // Content02 Slide JS
 
@@ -53,8 +43,6 @@ var slideWrapper = document.getElementsByClassName('slide-wrap'),
     prevButton = document.querySelector('#slide-button-prev'),
     nextButton = document.querySelector('#slide-button-next'),
     pageCurrent = document.querySelector('.slide-pagination-current');
-
-console.log(pageCurrent);
 
 for( var i = 0; i < slideCount; i++){
    slides[i].style.left = i * 100 + '%';
