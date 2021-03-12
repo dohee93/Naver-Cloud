@@ -1,3 +1,4 @@
+
 // Top Button JS
 var docElem = document.documentElement;
 var docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
