@@ -9,12 +9,6 @@
 
 @font-face {
    font-family: 'NanumSquare';
-   src: url(../font/NanumSquareB.woff);
-   font-weight: 600;
-}
-
-@font-face {
-   font-family: 'NanumSquare';
    src: url(../font/NanumSquareEB.woff);
    font-weight: 700;
 }
@@ -79,6 +73,10 @@ table, input, textarea, select, button, pre {
    margin: 0;
 }
 
+.en {
+   font-family: 'Calibre-webfont', sans-serif;
+   font-weight: 400;
+}
 
 @keyframes arrowMove {
    0%, 100% {
@@ -116,5 +114,42 @@ table, input, textarea, select, button, pre {
    100% {
       -webkit-transform: translateY(-870px);
       transform: translateY(-870px);
+   }
+}
+
+@keyframes main-fade {
+   0% {
+      opacity: 0;
+   }
+   5% {
+      opacity: 1;
+   }
+   25% {
+      opacity: 1;
+   }
+   30% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+
+@keyframes horizontalscroll {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(-1920px);
+   }
+}
+
+@keyframes cardboxopen {
+   0% {
+      max-height: 0px;
+   }
+   100% {
+      max-height: 600px;
    }
 }
