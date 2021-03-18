@@ -1,0 +1,384 @@
+
+/* Footer CSS */
+
+footer {
+    background-color: #f9f9f9;
+ }
+ footer .footer-cont {
+    margin: 0 auto;
+    max-width: 1476px;
+    position: relative;
+    padding: 50px 90px;
+    height: 100%;
+    display: flex;
+ }
+ footer .footer-cont .footer-left {
+    width: calc(100% - 156px);
+    display: inline-block;
+ }
+ footer .footer-cont .footer-left img {
+    width: 164px;
+ }
+ footer .footer-cont .footer-left .copyright-txt{
+    margin: 30px 0 20px;
+ }
+ footer .footer-cont .footer-left .copyright-txt p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #aaa;
+ }
+ footer .footer-cont .footer-left .copyright-txt p.en {
+    font-size: 14px;
+    letter-spacing: 0;
+ }
+ footer .footer-cont .footer-left .link-txt {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 10px;
+ }
+ footer .footer-cont .footer-left .link-txt a:first-child {
+    margin: 0;
+ }
+ footer .footer-cont .footer-left .link-txt a {
+    font-size: 14px;
+    line-height: 1;
+    color: #999;
+    display: inline-block;
+    margin-left: 24px;
+    font-weight: bold;
+    transition: .3s;
+ }
+ footer .footer-cont .footer-left .link-social {
+    display: inline-block;
+ }
+ footer .footer-cont .footer-left .link-social ul li:first-child {
+    margin: 0;
+ }
+ footer .footer-cont .footer-left .link-social ul li {
+    display: inline-block;
+    margin-left: 24px;
+    text-align: right;
+ }
+ footer .footer-cont .footer-left .link-social ul li a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    color: #ccc;
+    font-weight: bold;
+    transition: .3s;
+ }
+ footer .footer-cont .footer-right {
+    width: auto;
+ }
+ footer .footer-cont .footer-right .family-site {
+    display: inline-block;
+    margin-bottom: 88px;
+    position: relative;
+ }
+ footer .footer-cont .footer-right .family-site button {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    background-color: #999;
+    display: inline-block;
+    padding: 0 42px 0 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: .3s;
+    letter-spacing: -0.3px;
+ }
+ footer .footer-cont .footer-right .family-site button:hover {
+   background-color: black;
+ }
+
+ footer .footer-cont .footer-right .family-site button:after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    background: url(../img/footer_open.png) no-repeat center;
+    background-size: cover;
+    transition: .3s;
+ }
+ footer .footer-cont .footer-right .family-site ul {
+    display: none;
+    padding: 8px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 48px;
+    text-align: left;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fff;
+ }
+ footer .footer-cont .footer-right .family-site ul li {
+    position: relative;
+    padding: 6px 14px;
+ }
+ footer .footer-cont .footer-right .family-site ul li a {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #1e1e1e;
+    transition: .3s;
+ }
+ /* footer JS on class 추가 */
+ footer .footer-cont .footer-right .family-site.on button {
+    background-color: #1e1e1e;
+ }
+ footer .footer-cont .footer-right .family-site.on button:after {
+   transform: rotate(45deg);
+ }
+ footer .footer-cont .footer-right .family-site.on ul {
+    display: block;
+ }
+
+
+
+ 
+ /* Footer Mobile CSS */
+ footer .footer-cont.mo-foot .logo {
+    margin-bottom: 16px;
+    width: 144px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.top {
+     margin-bottom: 20px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.top.pc p {
+    display: none;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.top p {
+    font-weight: 600;
+    letter-spacing: 0px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt p {
+    font-size: 12px;
+    color: #999;
+ }
+ footer .footer-cont.mo-foot .link-social {
+    margin-bottom: 22px;
+ }
+ footer .footer-cont.mo-foot .link-social ul li {
+    display: inline-block;
+ }
+ footer .footer-cont.mo-foot .link-social ul li:first-child a {
+    background-image: url(../img/foot_mo_blog.png);
+ }
+ footer .footer-cont.mo-foot .link-social ul li:nth-child(2) a {
+    background-image: url(../img/foot_mo_facebook.png);
+ }
+ footer .footer-cont.mo-foot .link-social ul li:nth-child(3) a {
+    background-image: url(../img/foot_mo_navertv.png);
+ }
+ footer .footer-cont.mo-foot .link-social ul li:nth-child(4) a {
+    background-image: url(../img/foot_mo_youtube.png);
+ }
+ footer .footer-cont.mo-foot .link-social ul li:nth-child(5) a {
+    background-image: url(../img/foot_mo_medium.png);
+ }
+ footer .footer-cont.mo-foot .link-social ul li:nth-child(6) a {
+    background-image: url(../img/foot_mo_linkedin.png);
+ }
+ footer .footer-cont.mo-foot .link-social ul li a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    color: transparent;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+ footer .footer-cont.mo-foot .family-site {
+    margin-bottom: 22px;
+    display: block;
+    position: relative;
+ }
+ footer .footer-cont.mo-foot .family-site button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #999;
+    display: inline-block;
+    padding: 0 42px 0 14px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: .3s;
+    letter-spacing: -0.3px;
+ }
+ footer .footer-cont.mo-foot .family-site button:hover {
+   background-color: #1e1e1e;
+ }
+ footer .footer-cont.mo-foot .family-site button:after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    background: url(../img/footer_open.png)no-repeat center;
+    background-size: cover;
+    transition: .3s;
+ }
+ footer .footer-cont.mo-foot .family-site ul {
+    display: none;
+    padding: 8px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 48px;
+    text-align: left;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fff;
+ }
+ footer .footer-cont.mo-foot .family-site ul li {
+    padding: 6px 14px;
+    position: relative;
+ }
+ footer .footer-cont.mo-foot .family-site ul li a {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #1e1e1e;
+    transition: .3s;
+ }
+ footer .footer-cont.mo-foot .link-txt {
+    margin-bottom: 22px;
+ }
+ footer .footer-cont.mo-foot .link-txt a {
+     display: inline-block;
+     margin-right: 20px;
+     font-size: 12px;
+     font-weight: 700;
+     color: #666;
+ }
+ footer .footer-cont.mo-foot .link-txt a i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/mo_right_arrow.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    vertical-align: bottom;
+ }
+ footer .footer-cont.mo-foot .link-txt a:nth-of-type(2) {
+    margin-right: 0;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.bottom p {
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt p {
+    font-size: 12px;
+    color: #999;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.bottom p b {
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.top {
+    margin-bottom: 20px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.top.mo p.en {
+    font-size: 14px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt.top.mo p {
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: 0px;
+ }
+ footer .footer-cont.mo-foot .copyright-txt p {
+    color: #999;
+ }
+ 
+ /* ---- Footer Mobile CSS */
+
+ /* Mobile Footer JS - family 클래스 on 추가 */
+footer .footer-cont.mo-foot .family-site.on button {
+   background-color: #1e1e1e;
+}
+footer .footer-cont.mo-foot .family-site.on button:after {
+   transform: rotate(45deg);
+}
+footer .footer-cont.mo-foot .family-site.on ul {
+   display: block;
+}
+
+@media only screen and (max-width: 1596px) {
+   /* Footer 1596 */
+   footer .footer-cont {
+      margin: 0 auto;
+      padding: 50px 90px;
+      max-width: 1476px;
+   }
+}
+
+@media only screen and (max-width: 1024px) {
+   /* Footer 1024 */
+   footer .footer-cont {
+      margin: 0 auto;
+      padding: 50px 30px;
+   }
+   #top-btn {
+      width: 48px;
+      height: 48px;
+      background: url(../img/m/mo_top_btn.png) no-repeat center;
+      background-size: cover;
+      bottom: 30px;
+      right: 30px;
+   }
+}
+
+
+@media only screen and (max-width: 767px){
+
+   footer .footer-cont.mo-foot {
+      display: block;
+      padding: 35px 24px 24px;
+   }
+   footer .footer-cont.mo-foot .logo {
+      margin-bottom: 26px;
+   }
+   footer .footer-cont.mo-foot .copyright-txt.top {
+      display: none;
+   }
+   footer .footer-cont.mo-foot .copyright-txt.top.pc {
+      display: none;
+   }
+   footer .footer-cont.mo-foot .link-social {
+      margin-bottom: 12px;
+   }
+   footer .footer-cont.mo-foot .link-social ul li {
+      margin-right: 0.8%;
+      width: 15%;
+      text-align: center;
+   }
+   footer .footer-cont.mo-foot .link-social ul li a {
+      margin: 0 auto;
+   }
+   footer .footer-cont.mo-foot .family-site {
+      margin-bottom: 12px;
+   }
+   footer .footer-cont.mo-foot .copyright-txt.top.mo {
+      margin-bottom: 0;
+      display: block;
+   } 
+   #top-btn {
+      bottom: 24px;
+      right: 24px;
+   }
+
+}

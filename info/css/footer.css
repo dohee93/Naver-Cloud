@@ -1,0 +1,137 @@
+footer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(249, 249, 249);
+}
+
+.footer_wrap {
+  width: 100%;
+  max-width: 1476px;
+  padding: 50px 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.footer_left {
+  width: calc(100% - 156px);
+}
+.footer_left img {
+  width: 164px;
+}
+.naver_copyright {
+  color: rgb(170, 170, 170);
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  margin: 30px 0 20px;
+}
+.naver_copyright p:last-child {
+  font-family: "Calibre-webfont", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.naver_etc_link {
+  display: flex;
+}
+.naver_etc {
+  display: flex;
+  margin-right: 5%;
+  margin-bottom: 10px;
+}
+.naver_etc a {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  color: rgb(153, 153, 153);
+  transition-duration: 0.3s;
+}
+.naver_etc a:hover {
+  color: rgb(3, 199, 90);
+}
+.naver_etc p:last-child a {
+  margin: 0 0 0 24px;
+}
+.naver_social {
+  display: flex;
+}
+
+.naver_social li {
+  margin: 0 0 0 24px;
+}
+.naver_social li:nth-child(1) {
+  margin-left: 0;
+}
+.naver_social li a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgb(204, 204, 204);
+  transition-duration: 0.3s;
+}
+.naver_social li a:hover {
+  color: rgb(3, 199, 90);
+}
+.footer_right .famliy_site {
+  position: relative;
+  margin-bottom: 88px;
+  display: inline-block;
+}
+
+.footer_right .list_btn {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  background: #999;
+  display: inline-block;
+  padding: 0 42px 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  letter-spacing: -0.3px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer_right .list_btn:after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  background: url(../images/footer_open.png) no-repeat center;
+  background-size: cover;
+}
+.footer_right .list_btn:hover {
+  background-color: var(--black-color);
+}
+.footer_right .famliy_site ul {
+  display: none;
+  padding: 8px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 48px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.footer_right .famliy_site.on ul {
+  display: block;
+}
+.footer_right .famliy_site ul li {
+  position: relative;
+  padding: 6px 14px;
+}
+.footer_right .famliy_site ul li a {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e1e1e;
+  transition: 0.3s;
+}

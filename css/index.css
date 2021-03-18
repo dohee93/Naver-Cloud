@@ -1,0 +1,1402 @@
+/* Hero MainVisual CSS */
+.hero_main_wrap {
+    width: 100%;
+    height: auto;
+}
+
+.hero_main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero_slide_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.hero_slide_wrap .slide_1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide_1 video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide_1 .cont_box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 150px;
+}
+
+.slide_1 .cont_box a {
+    display: block;
+    background-image: url(../img/main_slide_btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 299px;
+    height: 46px;
+    margin-top: 30px;
+    transition-duration: 0.3s;
+}
+
+.slide_1 .cont_box a:hover {
+    background-image: url(../img/main_slide_btn_on.png);
+}
+
+.slide_2 {
+    position: relative;
+    background-image: url(../img/slide_img01.jpg);
+    width: 100%;
+    height: 100%;
+}
+
+.slide_2 .cont_box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 150px;
+}
+
+.slide_2 .cont_box h3 .m_br {
+    display: none;
+}
+
+.slide_2 .cont_box a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 54px;
+    width: auto;
+    height: 54px;
+    padding: 0 55px 0 36px;
+    margin: 30px 0 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    position: relative;
+}
+
+.slide_2 .cont_box a:after {
+    display: inline-block;
+    content: '';
+    background-image: url(../img/outlink_icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    transform: translateY(-50%);
+}
+
+.slide_3 {
+    position: relative;
+    background-image: url(../img/slide_img02.jpg);
+    width: 100%;
+    height: 100%;
+}
+
+.slide_3 .cont_box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 150px;
+}
+
+.slide_3 .cont_box a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 54px;
+    width: auto;
+    height: 54px;
+    padding: 0 55px 0 36px;
+    margin: 30px 0 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    position: relative;
+}
+
+.slide_3 .cont_box a:after {
+    display: inline-block;
+    content: '';
+    background-image: url(../img/outlink_icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    transform: translateY(-50%);
+}
+
+.cont_box h3 {
+    font-size: 48px;
+    line-height: 68px;
+    color: rgb(255, 255, 255);
+    letter-spacing: -1px;
+}
+
+.slide_btn_box {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 0 150px;
+    display: flex;
+}
+
+.slide_btn_box .swiper_button_prev {
+    background-image: url(../img/main_prev_btn_w.png);
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    transition-duration: 0.3s;
+}
+
+.slide_btn_box .swiper_button_prev:hover {
+    background-image: url(../img/main_prev_btn.png);
+}
+
+.slide_btn_box .swiper_button_next {
+    background-image: url(../img/main_next_btn_w.png);
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    margin: 0 0 0 24px;
+    transition-duration: 0.3s;
+}
+
+.slide_btn_box .swiper_button_next:hover {
+    background-image: url(../img/main_next_btn.png);
+}
+
+.button-btn {
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    bottom: 66px;
+    transform: translateX(-50%);
+}
+
+.button-btn button {
+    background-image: url(../img/down_arrow_w.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 62px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    /* 애니메이션 */
+    animation: arrowMove 1.6s infinite;
+}
+
+.hide-txt {
+    text-indent: -9999px;
+    display: none;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+
+.button-btn button:hover {
+    background-image: url(../img/down_arrow_g.png);
+}
+
+@keyframes arrowMove {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* 네이버 클라우드 소개 CSS */
+.cloud_introduce {
+    width: 100%;
+    height: auto;
+}
+
+.introduce_cont {
+    width: 100%;
+    max-width: 1476px;
+    padding: 142px 90px 152px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.introduce_cont .eyebrow {
+    font-size: 18px;
+    font-family: 'NanumSquare','Noto Sans KR', sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgb(30, 30, 30);
+    margin: 0 0 36px; 
+}
+
+.introduce_cont h3 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 60px;
+    color:rgb(30, 30, 30);
+    margin: 0 0 48px;
+}
+
+.introduce_cont h3 span {
+    color: rgb(170, 170, 170);
+}
+
+.introduce_cont h3 .m_br {
+    display: none;
+}
+
+.black_btn a {
+    display: inline-block; 
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 54px;
+    padding: 0 40px;
+    background-color: rgb(30, 30, 30);
+    border-radius: 27px;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.3s;
+}
+
+.black_btn a:hover {
+    background-color: rgb(3, 199, 90);
+}
+
+@keyframes fade_in_up {
+    0% { margin-top: 40px; opacity: 0; }
+    100% { margin-top: 0; opacity: 1; }
+}
+
+
+/* 네이버 클라우스 서비스 안내 부분 CSS */
+.cloud_service {
+    width: 100%;
+    height: auto;
+    background-color: rgb(249, 249, 249);
+}
+
+.service_cont {
+    width: 100%;
+    height: 860px;
+    max-width: 1476px;
+    padding: 0 90px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.cont_box_left {
+    padding: 190px 0;
+    width: 50%;
+}
+
+.cont_box_left .eyebrow {
+    font-size: 18px;
+    font-family: 'NanumSquare','Noto Sans KR', sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgb(30, 30, 30);
+    margin: 0 0 36px; 
+}
+
+.cont_box_left h3 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0 0 48px;
+}
+
+.cont_box_left h3 span {
+    color: rgb(170, 170, 170);
+}
+
+/* PC 롤링 이미지 애니메이션 부분 CSS */
+.pc_cont_box_right {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Mobile 롤링 이미지 애니메이션 부분 display: none */
+.m_cont_box_bottom {
+    display: none;
+}
+/* ---------------------------------------------- */
+
+.pc_row_1 {
+    width: 43%;
+    margin: 0 6% 0 0;
+}
+
+.pc_row_1 li {
+    position: relative;
+    margin: 32px 0 0 0;
+}
+
+.pc_row_1 li p {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Calibre-webfont', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    text-align: center;
+}
+
+.pc_row_1 li img{
+    width: 100%;
+    display: block;
+    border-radius: 25px;
+}
+
+.pc_row_2 {
+    width: 43%;
+    margin: -160px 0 0 0;
+
+}
+
+.pc_row_2 li {
+    position: relative;
+    margin: 32px 0 0 0;
+}
+
+.pc_row_2 li p {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Calibre-webfont', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    text-align:center;
+}
+
+.pc_row_2 li img{
+    width: 100%;
+    display: block;
+    border-radius: 25px;
+}
+
+/* --수직애니메이션-- */
+@keyframes verticalscroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8448px); }
+}
+
+
+/* IT생태계 안내 부분  CSS */
+
+.cloud_ecosystem {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.m_cloud_ecosystem {
+    display: none;
+}
+
+.ecosystem_cont_wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.ecosystem_cont_wrap video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ecosystem_cont {
+    position: relative;
+    width: 100%;
+    max-width: 1479px;
+    height: 894px;
+    padding: 0 90px;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+}
+
+.ecosystem_cont_text {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+}
+
+.ecosystem_cont_text .eyebrow {
+    font-size: 18px;
+    font-family: 'NanumSquare','Noto Sans KR', sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgb(255, 255, 255);
+    margin: 0 0 36px; 
+}
+
+.ecosystem_cont_text h3 {
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -1px;
+    margin: 0 0 48px;
+}
+
+.ecosystem_cont_text h3 span .m_br {
+    display: none;
+}
+
+.ecosystem_cont_text .white_btn a {
+    display: inline-block; 
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 54px;
+    padding: 0 40px;
+    border-radius: 27px;
+    border: 1px solid white;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.3s;
+}
+
+.ecosystem_cont_text .white_btn a:hover {
+    background-color: rgb(3, 199, 90);
+    border: none;
+}
+
+.ecosystem_cont_img {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: 50%;
+    right: 90px;
+    transform: translateY(-50%);
+}
+
+.ecosystem_cont_img .icon_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* ---숲 아아콘 그림 애니메이션--- */
+@keyframes zoomout {
+    0% { 
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% { 
+        transform: scale(1.0); 
+        opacity: 1;
+    }
+}
+
+.cloud_ecosystem .button-btn {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 66px;
+    transform: translateX(-50%);
+}
+
+.cloud_ecosystem .button-btn button {
+    background-image: url(../img/down_arrow_w.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 62px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    /* 애니메이션 */
+    animation: arrowMove 1.6s infinite;
+}
+
+.hide-txt {
+    text-indent: -9999px;
+    display: none;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+
+.cloud_ecosystem .button-btn button:hover {
+    background-image: url(../img/down_arrow_g.png);
+}
+
+
+/* 네이버 새로운 소식 & 공지사항 CSS */
+/*----네이버 소식 CSS----*/
+.naver_news_wrap {
+    width: 100%;
+    height: auto;
+}
+
+.naver_news {
+    width: 100%;
+    max-width: 1476px;
+    height: auto;
+    padding: 202px 90px 120px;
+    margin: 0 auto;
+}
+
+.naver_news h3 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 60px;
+    color:rgb(30, 30, 30);
+    margin: 0 0 48px;
+}
+
+.naver_news h3 span {
+    color: rgb(170, 170, 170);   
+}
+
+.news_cont {
+    display: flex;
+    margin: 0 0 48px 0;
+}
+
+.news_cont li {
+    width: calc(25% - 16px);
+    margin: 0 0 0 32px;
+}
+
+.news_cont li a:hover .news_cont_img .hover_dark_bg {
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.news_cont li a:hover p {
+    color: rgb(3, 199, 90);
+}
+
+.news_cont li:first-child {
+    margin: 0;
+}
+
+.news_cont_img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.news_cont_img .cont_img_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(30, 30, 30, 0.1);
+    border-radius: 24px;
+}
+
+.news_cont_img .hover_dark_bg {
+    border-radius: 24px;
+    transition-duration: 0.3s;
+}
+
+.news_cont_img img {
+    width: 100%;
+    border-radius: 24px;
+    vertical-align: top;
+}
+
+.news_cont_text p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;    
+    color: rgb(30, 30, 30);
+    margin: 20px 0;
+    transition-duration: 0.3s;
+}
+
+.news_cont_text span {
+    font-family: 'Calibre-webfont', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgb(170, 170, 170);
+}
+
+.naver_news .white_btn {
+    text-align: center;
+}
+
+.naver_news .white_btn a {
+    display: inline-block; 
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 54px;
+    padding: 0 40px;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 27px;
+    color: rgb(30, 30, 30);
+    transition-duration: 0.3s;
+}
+
+.naver_news .white_btn a:hover {
+    background-color: rgb(3, 199, 90);
+    border: 1px solid rgb(3, 199, 90);
+    color: rgb(249, 249, 249);
+}
+
+/*----네이버 공지사항----*/
+.naver_notice {
+    display: flex;
+    margin: 90px 0 0 0;
+}
+
+.naver_notice li {
+    width: calc(50% - 16px);
+    padding: 28px 28px 32px 36px;
+    border-radius: 24px;
+    margin: 0 32px 0 0;
+}
+
+.naver_notice li .eyebrow2 {
+    font-family: 'Calibre-webfont', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin: 0 0 18px 0;
+}
+
+.notice_cont_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.notice_cont_text p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.naver_notice li:first-child {
+    background-color: rgb(3, 199, 90);
+}
+
+.naver_notice li:last-child {
+    margin: 0;
+    background-color: rgb(7, 180, 235);
+}
+
+.notice_cont_text .black_btn a {
+    line-height: 46px;
+}
+
+.naver_notice .black_btn a:hover{
+    background-color:rgb(255, 255, 255);
+    color: rgb(30, 30, 30);
+}
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+    /* Hero MainVisual CSS */
+    .slide_1 .cont_box {
+        width: 100%;
+        padding: 0 90px;
+        max-width: 1476px;
+        margin: 0 auto;
+    }
+
+    .slide_2 .cont_box {
+        width: 100%;
+        padding: 0 90px;
+        max-width: 1476px;
+        margin: 0 auto;
+    }
+
+    .slide_3 .cont_box {
+        width: 100%;
+        padding: 0 90px;
+        max-width: 1476px;
+        margin: 0 auto;
+    }
+
+    .slide_btn_box {
+        max-width: 1476px;
+        padding: 0 90px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1279px) {
+
+/* Hero 메인 비주얼 부분 */
+    .hero_main {
+        height: 90vh;
+    }
+
+    .slide_btn_box {
+        padding: 0 90px;
+    }
+
+
+/* IT생태계 안내 부분 */
+    .ecosystem_cont_wrap {
+        height: 860px;
+    }
+
+
+/* 네이버 공지사항 부분 */
+    .notice_cont_text {
+        display: block;
+    }
+
+    .notice_cont_text .black_btn {
+        margin: 15px 0 0 0;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 1025px) {
+    /* 네이버클라우드 서비스 안내 부분 */
+    .service_cont {
+        padding: 0 30px;
+    }
+
+    .cont_box_left h3 {
+        line-height: 60px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    /* Hero 메인 비주얼 부분 */
+    .slide_1 .cont_box {
+        padding: 0 30px;
+    }
+
+    .slide_2 .cont_box {
+        padding: 0 30px;
+    }
+
+    .slide_3 .cont_box {
+        padding: 0 30px;
+    }
+
+    .cont_box h3 {
+        font-size: 42px;
+        line-height: 63px;
+    }
+
+    .slide_btn_box {
+        padding: 0 30px;
+    }
+
+
+    /* IT생태계 안내 부분 */
+    .ecosystem_cont {
+        padding: 0 30px;
+    }
+
+    .ecosystem_cont_text h3 br {
+        display: none;
+    }
+
+    .ecosystem_cont_text {
+        left: 30px;
+    }
+
+    .ecosystem_cont_text .eyebrow {
+        margin: 0 0 48px;
+    }
+    
+    .ecosystem_cont_text h3 {
+        margin: 0 0 60px;
+    }
+
+
+    /* 네이버 새로운 소식 & 공지사항 */
+    .naver_news {
+        padding: 120px 30px 80px;
+    }
+
+    .naver_news h3 {
+        font-size: 38px;
+        line-height: 57px;
+    }
+
+    .news_cont {
+        flex-wrap: wrap;
+    }
+
+    .news_cont li {
+        width: calc(50% - 16px);
+    }
+
+    .news_cont li:nth-child(1) {
+        margin: 0 0 48px 0;
+    }
+    
+    .news_cont li:nth-child(2) {
+        margin: 0 0 48px 32px;
+    }
+
+    .news_cont li:nth-child(3) {
+        margin: 0;
+    }
+
+    .naver_news .white_btn a {
+        padding: 0 44px 0 26px;
+        position: relative;
+    }
+
+    .naver_news .white_btn a:after {
+        background-image: url(../img/mo_link_def_b.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+
+    .naver_news .white_btn a:hover {
+        background-color: rgb(3, 199, 90);
+        border: 1px solid rgb(3, 199, 90);
+        color: rgb(249, 249, 249);
+    }
+
+    .naver_news .white_btn a:hover:after {
+        background-image: url(../img/mo_link_def.png);
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    /* Hero 메인 비주얼 부분 */
+    .hero_main {
+        height: 80vh;
+    }
+
+    .cont_box h3 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .slide_2 .cont_box h3 .m_br {
+        display: block;
+    }
+
+    .cont_box a {
+        width: 246px;
+        height: 42px;
+    }
+
+    .slide_btn_box {
+        padding: 0 24px;
+        bottom: 24px;
+    }
+
+    .slide_btn_box .swiper_button_prev {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .slide_btn_box .swiper_button_next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .button-btn {
+        display: none;
+    }
+    
+
+
+    /* 클라우드 소개 부분 */
+    .introduce_cont {
+        padding: 48px 24px 36px;
+    }
+
+    .eyebrow {
+        font-size: 14px;
+        margin: 0 0 20px; 
+    }
+    
+    .introduce_cont h3 {
+        font-size: 24px;
+        line-height: 31.2px;
+        margin: 0 0 24px;
+    }
+
+    .introduce_cont h3 .m_br {
+        display: block;
+    }
+
+    .black_btn a {
+        position: relative;
+        line-height: 46px;
+        padding: 0 44px 0 26px;
+    }
+
+    .black_btn a:after {
+        background-image: url(../img/mo_link_def.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 14px;
+        right: 18px;
+    }
+
+
+
+    /* 네이버 클라우스 서비스 안내 부분 CSS */
+    .service_cont {
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    .cont_box_left {
+        padding: 48px 24px 40px;
+        width: 100%;
+    }
+
+    .cont_box_left .eyebrow {
+        font-size: 14px;
+        margin: 0 0 20px;
+    }
+
+    .cont_box_left h3 {
+        font-size: 24px;
+        line-height: 31.2px;
+        margin: 0 0 24px;
+    }
+
+    .cont_box_left h3 .m_br_none {
+        display: none;
+    }
+
+    /* PC 롤링 이미지 애니메이션 부분 display: none */
+    .pc_cont_box_right {
+        display: none;
+    }
+    /* ------------------------------------------ */
+
+    .m_cont_box_bottom {
+        display: block;
+        padding: 0 0 76px;
+    }
+
+    .m_cont_box_line_1 {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .m_line_1 {
+        display: flex;
+        animation: horizontalscroll 80s linear infinite;
+    }
+
+    .m_line_1 li {
+        width: 150px;
+        height: 150px;
+        margin: 0 12px 0 0;
+        position: relative;
+    }
+
+    .m_line_1 li p {
+        position: absolute;
+        color:rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        font-family: 'Calibre-webfont', sans-serif;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .m_line_1 li img {
+        width: 100%;
+        background-size: contain;
+        border-radius: 12px;
+    }
+
+    .m_cont_box_line_2 {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .m_line_2 {
+        display: flex;
+        margin: 12px 0 0 -84px;
+        animation: horizontalscroll 80s linear infinite;
+    }
+
+    .m_line_2 li {
+        width: 150px;
+        height: 150px;
+        margin: 0 12px 0 0;
+        position: relative;
+    }
+
+    .m_line_2 li p {
+        position: absolute;
+        color:rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        font-family: 'Calibre-webfont', sans-serif;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .m_line_2 li img {
+        width: 100%;
+        background-size: contain;
+        border-radius: 12px;
+    }
+
+    /* --수평애니메이션-- */
+    @keyframes horizontalscroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-2440px); }
+    }
+
+
+    /* IT생태계 안내 부분 */
+    .cloud_ecosystem {
+        display: none;
+    }
+
+    .m_cloud_ecosystem {
+        display: block;
+        background-image: url(../img/mo_intro_ecosystem.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 48px 24px;
+    }
+
+    .m_cloud_ecosystem_text .eyebrow {
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        margin: 0 0 24px;
+    }
+
+    .m_cloud_ecosystem_text h3 {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+        letter-spacing: -1;
+        color:rgb(255, 255, 255);
+        margin: 0 0 32px;
+    }
+
+    .m_cloud_ecosystem_text h3 span .m_br_none {
+        display: none;
+    }
+
+    .m_cloud_ecosystem_text h3 span .m_br {
+        display: none;
+    }
+
+    .m_cloud_ecosystem_img {
+        position: relative;
+        width: 55%;
+        height: auto;
+        margin: 0 auto 32px;
+    }
+    
+    .m_cloud_ecosystem_img img {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .m_cloud_ecosystemt .m_white_btn {
+        display: block;
+    }
+
+    .m_cloud_ecosystem .m_white_btn a {
+        display: inline-block; 
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 44px;
+        padding: 0 44px 0 26px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 100px;
+        color: rgb(255, 255, 255);
+        transition-duration: 0.3s;
+        bottom: 0;
+        left: 0;
+        position: relative;
+    }
+
+    .m_cloud_ecosystem .m_white_btn a:after {
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/mo_link_def.png);
+        background-size: contain;
+        position: absolute;
+        top: 14px;
+        right: 18px;
+    }
+
+    .m_cloud_ecosystem .m_white_btn a:hover {
+        background-color: rgb(3, 199, 90);
+        border:rgb(3, 199, 90);
+    }
+
+
+
+
+    /* 네이버 새로운 소식 & 공지사항 */
+    .naver_news {
+        padding: 48px 24px 60px;
+    }
+
+    .naver_news h3 {
+        font-size: 24px;
+        line-height: 36px;
+        margin: 0 0 24px;
+    }
+
+    .news_cont {
+        margin: 0 0 16px;
+    }
+
+    .news_cont li { 
+        width: 100%;
+        padding: 16px 0;
+        border-top: 1px solid rgb(238, 238, 238);
+        border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    .news_cont li:nth-child(1) {
+        margin: 0;
+    }
+    
+    .news_cont li:nth-child(2) {
+        margin: 0;
+    }
+
+    .news_cont li:nth-child(4) {
+        margin: 0;
+    }
+
+    .news_cont li a {
+        display: block;
+    }
+
+    .news_cont_wrap {
+        display: flex;
+        position: relative;
+    }
+
+    .news_cont_img {
+        width: 27%;
+        height: 72px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .news_cont_img .cont_img_border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(30, 30, 30, 0.1);
+        border-radius: 12px;
+        z-index: 1;
+    }
+
+    .news_cont_img .hover_dark_bg {
+        border-radius: 12px;
+    }
+
+    .news_cont_img:hover .hover_dark_bg {
+        z-index: 2;
+    }
+    
+    .news_cont_img img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+    }
+
+    .news_cont_text {
+        display: inline-block;
+        width: calc(100% - 28%);
+        padding: 8px 0 2px 14px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .news_cont_text p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .naver_news .white_btn a {
+        font-size: 14px;
+        line-height: 44px;
+    }
+
+    .naver_news .white_btn a:after {
+        top: 14px;
+    }
+
+
+/*----네이버 공지사항 CSS----*/
+    .naver_notice {
+        display: block;
+        margin: 60px 0 0 0;
+    }
+
+    .naver_notice li {
+        width: 100%;
+        border-radius: 12px;
+        margin: 0 0 16px 0;
+    }
+
+    .naver_notice li .eyebrow2 {
+        font-size: 15px;
+        letter-spacing: normal;
+        margin: 0 0 12px 0;
+    }
+
+    .notice_cont_text .black_btn a {
+        position: relative;
+    }
+
+    .notice_cont_text .black_btn a:after {
+        position: absolute;
+        display: block;
+        content: '';
+        background-image: url(../img/mo_link_diag.png);
+        width: 16px;
+        height: 16px;
+        top: 15px;
+        right: 18px;
+
+    }
+
+    .naver_notice .black_btn a:hover:after {
+        background-image: url(../img/mo_link_diag_b.png);
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 487px) {
+
+    /* 네이버 새로운 소식 & 공지사항 */
+    .news_cont_img img {
+        width: auto;
+        height: 100%;
+    }
+
+}
