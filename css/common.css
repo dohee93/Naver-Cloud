@@ -107,3 +107,17 @@ table, input, textarea, select, button, pre {
    }
 }
 
+
+@keyframes verticalscroll2 {
+   0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+   }
+
+   100% {
+      -webkit-transform: translateY(-870px);
+      transform: translateY(-870px);
+   }
+}
+
+

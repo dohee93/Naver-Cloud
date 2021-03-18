@@ -695,9 +695,8 @@ header {
 /* Section 02 - 4 */
 
 .container .skill-cont .skill-section .section-04-cont {
-   /* font-size: 0; */
    margin-top: 60px;
-   /* opacity: 0; */
+   /* overflow: hidden; */
 }
 
 .container .skill-cont .skill-section .section-04-cont .logo-wrap {
@@ -706,12 +705,17 @@ header {
    padding: 60px 0;
    height: 362px;
    overflow: hidden;
+   
 }
 
 .container .skill-cont .skill-section .section-04-cont .logo-wrap ul {
    display: block;
    width: 100%;
    height: calc(435px * 3);
+}
+
+.container .skill-cont .skill-section .section-04-cont .logo-wrap ul.active {
+   animation: verticalscroll2 14s linear infinite;
 }
 
 .container .skill-cont .skill-section .section-04-cont .logo-wrap ul li {
