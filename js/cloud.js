@@ -1,5 +1,5 @@
 
-// PR 생성
+// PR
 // Header lang JS
 var headerLang = document.querySelectorAll('.lang-cont');
 var langButton = document.querySelectorAll('.lang-btn');
