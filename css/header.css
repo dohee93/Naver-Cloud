@@ -9,7 +9,7 @@ header .header-container {
     top: 0;
     left: 0;
     background-color: transparent;
-    z-index: 100;
+    z-index: 90;
  }
  header .header-container.hide {
     display: none;
@@ -231,9 +231,10 @@ header .header-container {
     position: absolute;
     right: 0;
     top: -8px;
-    z-index: 10;
+    z-index: 99;
  }
- header .header-wrap .m-menu .m-nav.active {
+ header .header-wrap .m-nav.active {
+   
     display: block;
  }
  header.on .header-wrap .m-menu span {
@@ -362,12 +363,12 @@ header .header-container {
     position: absolute;
     left: 150px;
     top: 0;
-    z-index: 105;
+    z-index: 95;
     opacity: 0;
  }
  #top-line.show {
     top: 82px;
-    z-index: 105;
+    z-index: 95;
     opacity: 1;
     /* position: fixed; */
  }
@@ -486,7 +487,7 @@ header .header-container {
       left: 30px;
    }
    #top-line.show {
-      top: 61px;
+      top: 60px;
    }
 }
 
@@ -516,7 +517,7 @@ header .header-container {
       left: 30px;
    }
    #top-line.show {
-      top: 61px;
+      top: 60px;
    }
    
 }
@@ -534,8 +535,8 @@ header .header-container {
       z-index: 200;
    }
    .mo.cloud #top-line.show {
-      top: 61px;
-      z-index: 105;
+      top: 60px;
+      z-index: 95;
       opacity: 1;
       position: fixed;
       transition-duration: 700ms;
@@ -547,7 +548,7 @@ header .header-container {
       position: absolute;
       left: 24px;
       top: 0;
-      z-index: 105;
+      z-index: 95;
       opacity: 0;
    }
       
