@@ -29,104 +29,142 @@
 
 
 </head>
-<body onscroll="scrollEvent();">
+<body>
+    <div class="wrap pc cloud">
 
     <!-- 네이버 상단 header 부분 -->
-    <header>
-
+    <header class="homeheader" id="header">
         <!-- PC gnb 메뉴 부분 -->
-        <nav class="header_wrap" id="navbar">
-            <div class="header">
-                <div class="gnb_logo">
-                    <a id="logo" href="./index.html"></a>
-                </div>
-
-                <div class="gnb_menu_wrap">
-                    <ul class="gnb_menu">
-                        <li class="gnb_menu_item">
-                            <a class="item" href="./index.html">홈</a>
+        <div class="header-container" style="z-index: 102;">
+            <div class="header-wrap clfix">
+               <div class="box clear">
+                  <h1>
+                     <a href="./index.html"></a>
+                  </h1>
+                  <div class="header-nav">
+                     <ul class="clfix">
+                        <li class="active">
+                           <div class="nav-item">
+                              <a href="./index.html">홈</a>
+                           </div>
                         </li>
-                        <li class="gnb_menu_item">
-                            <a class="item" href="info/index.html">소개</a>
+                        <li>
+                           <div class="nav-item">
+                              <a href="info/index.html">소개</a>
+                           </div>
                         </li>
-                        <li class="gnb_menu_item">
-                            <a class="item" href="cloud/index.html">클라우드</a>
+                        <li>
+                           <div class="nav-item">
+                              <a href="cloud/index.html">클라우드</a>
+                           </div>
                         </li>
-                        <li class="gnb_menu_item">
-                            <a class="item" href="media/media_pressrelease/index.html">미디어</a>
+                        <li>
+                           <div class="nav-item">
+                              <a href="media/media_pressrelease/index.html">미디어</a>
+                           </div>
                         </li>
-                        <li class="gnb_menu_item">
-                            <a class="item" href="https://recruit.navercloudcorp.com/navercloud/recruitMain" target="_blank">채용<span></span></a>
+                        <li class="out-link">
+                           <div class="nav-item">
+                              <a href="https://recruit.navercloudcorp.com/navercloud/recruitMain" target="_blank">
+                                 채용
+                                 <i>outlinkicon</i>
+                              </a>
+                           </div>
                         </li>
-                        <li class="gnb_menu_item">
-                            <a class="item" href="https://www.navercloudcorp.com/ncp/proposalGuide" target="_blank">제휴<span></span></a>
+                        <li class="out-link">
+                           <div class="nav-item">
+                              <a href="https://www.navercloudcorp.com/ncp/proposalGuide" target="_blank">
+                                 제휴
+                                 <i>outlinkicon</i>
+                              </a>
+                           </div>
                         </li>
-                        <li class="gnb_menu_item">
-                            <a class="item" href="https://www.ncloud.com/?language=ko-KR" target="_blank">네이버클라우드 플랫폼<span></span></a>
+                        <li class="out-link">
+                           <div class="nav-item">
+                              <a href="https://www.ncloud.com/?language=ko-KR" target="_blank">
+                                 네이버 클라우드 플랫폼
+                                 <i>outlinkicon</i>
+                              </a>
+                           </div>
                         </li>
-                    </ul>
-                    
-                    <div class="gnb_lang active">
-                        <a id="lang_img" href="javascript:"></a>
-                        <ul id="langUL">
-                            <li>
-                                <a href="" class="active">한국어</a>
-                            </li>
-                            <li>
-                                <a href="" class="en">English</a>
-                            </li>
-                            <li>
-                                <a href="" class="jp">일본어</a>
-                            </li>
+                     </ul>
+                     <div class="lang-cont">
+                        <a href="#" class="lang-btn"></a>
+                        <ul class="clfix">
+                           <li>
+                              <a href="#" class="active">한국어</a>
+                           </li>
+                           <li>
+                              <a href="#" class="en">English</a>
+                           </li>
+                           <li>
+                              <a class="jp" href="#">日本語</a>
+                           </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Mobile gnb 메뉴 부분 -->
-        <nav class="m_header_wrap" id="m_navbar">
-            <div>
-                <div class="m_header">
-                    <div class="m_gnb_logo">
-                        <a class="m_gnb_logo_w" id="m_gnb_logo_w" href="./index.html"></a>
-                        <a class="m_gnb_logo_g" href="./index.html"></a>
-                    </div>
-
-                    <div class="m_lang_menu_wrap">
-                        <div class="m_gnb_lang mactive">
-                            <a class="lang_img" id="m_lang_img" href="javascript:doDisplay();"></a>
-                            <ul id="mlangUL">
-                                <li>
-                                    <a href="" class="active">한국어</a>
-                                </li>
-                                <li>
-                                    <a href="" class="en">English</a>
-                                </li>
-                                <li>
-                                    <a href="" class="jp">일본어</a>
-                                </li>
-                            </ul>
+                     </div>
+                     <a href="#" class="hamburger m-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </a>
+                     <div class="m-nav">
+                        <div class="top clear">
+                           <a href="./index.html" class="logo left">NAVER Cloud Logo</a>
+                           <a href="#" class="close-btn right">Close Button</a>
                         </div>
-
-                        <div class="m_gnb_menu">
-                            <span onclick="menuOpen();" id="gnb_m_menuopen"></span>
-                            <span onclick="menuClose();" id="gnb_m_menuclose"></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="m_menu_sub">
-                    <li><a href="./index.html">홈</a></li>
-                    <li><a href="info/index.html">소개</a></li>
-                    <li><a href="cloud/index.html">클라우드</a></li>
-                    <li><a href="./media/media_pressrelease/index.html">미디어</a></li>
-                    <li><a href="https://recruit.navercloudcorp.com/navercloud/recruitMain" target="_blank">채용</a></li>
-                    <li><a href="https://www.navercloudcorp.com/ncp/proposalGuide" target="_blank">제휴</a></li>
-                    <li><a href="https://www.ncloud.com/?language=ko-KR" target="_blank">네이버 클라우드 플랫폼</a></li>
-                </ul>
+                        <ul class="clear">
+                           <li class="active">
+                              <div class="mo-item">
+                                 <a href="index.html">
+                                    홈
+                                 </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="mo-item">
+                                 <a href="info/index.html">소개</a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="mo-item">
+                                 <a href="cloud/index.html">클라우드</a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="mo-item">
+                                 <a href="media/media_pressrelease/index.html">미디어</a>
+                              </div>
+                           </li>
+                           <li class="out-link">
+                              <div class="mo-item">
+                                 <a href="https://recruit.navercloudcorp.com/navercloud/recruitMain" target="_blank">
+                                    채용
+                                    <i>outlinkicon</i>
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="out-link">
+                              <div class="mo-item">
+                                 <a href="https://www.navercloudcorp.com/ncp/proposalGuide" target="_blank">
+                                    제휴
+                                    <i>outlinkicon</i>
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="out-link">
+                              <div class="mo-item">
+                                 <a href="https://www.ncloud.com/?language=ko-KR" target="_blank">
+                                    네이버 클라우드 플랫폼
+                                    <i>outlinkicon</i>
+                                 </a>
+                              </div>
+                           </li>
+                        </ul>
+                     </div> 
+                  </div>
+               </div>
             </div>
-        </nav>
-
+         </div>
     </header>
 
     <main>
@@ -976,7 +1014,9 @@
                 </div>
             </div>
         </section>
+    
     </main>
+    </div>
 
    <!-- 네이버 하단 내용 -->
    <div class="pc cloud">

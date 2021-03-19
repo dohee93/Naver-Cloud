@@ -17,6 +17,12 @@ body{
   letter-spacing: -.3px;
 }
 
+.clfix:before, .clfix:after {
+  line-height: 0;
+  display: table;
+  content: '';
+}
+
 :root {
   --black-color: #1e1e1e;
   --green-color: #03c75a;
@@ -24,6 +30,10 @@ body{
   --grey-light2-color: #eee;
   --grey-dark-color: #888;
   --white-color: #fff;
+}
+
+.tit {
+  padding-top: 80px;
 }
 
 .tit .tit_wrap {

@@ -1,20 +1,3 @@
- // langs toggle
-// 클릭되는 영역
-const langBtn = document.querySelector('.lang_btn');
- // 메뉴 목록
-const langNav = document.querySelector('.lang_nav');
-
-
-
-langBtn.addEventListener('click', ( ) => {
-    
-    langNav.classList.toggle('on');
-   
-    
-});
-
-
-
 
 
 // 기업소개 pictogram box
