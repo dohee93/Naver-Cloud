@@ -67,8 +67,6 @@
       position: absolute;
       top: 30%;
       left: 24px;
-      transform: translateX(0, -50%);
-      z-index: 999;
       opacity: 1;
       z-index: 20;
       transition: .8s;
