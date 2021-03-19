@@ -214,10 +214,10 @@ function hasScrolled() {
 
          headerWrap[0].classList.add('hide');
          topLine[0].classList.remove('show');
-         subHeader[0].style = "top: 0px; position: fixed; z-index: 101; transition-duration: 650ms;"
+         subHeader[0].style = "top: 0px; position: fixed; z-index: 99; transition-duration: 650ms;"
 
          topLine[1].classList.remove('show');
-         subHeader[1].style = "top: 0px; position: fixed; z-index: 101; transition-duration: 650ms;"
+         subHeader[1].style = "top: 0px; position: fixed; z-index: 99; transition-duration: 650ms;"
          if(nowScrollTop > content02Top - 200 && nowScrollTop < content03Top - screenH) {
             smallNav[0].classList.add('down');
             smallNav[0].classList.remove('up');
@@ -239,7 +239,7 @@ function hasScrolled() {
             subHeader[0].style = "top: 78px; position: fixed; z-index: 99; transition-duration: 650ms;"
 
             topLine[1].classList.add('show');
-            subHeader[1].style = "top: 60px; position: fixed; z-index: 101; transition-duration: 650ms;"
+            subHeader[1].style = "top: 60px; position: fixed; z-index: 99; transition-duration: 650ms;"
 
             if(nowScrollTop > content02Top - 200 && nowScrollTop < content03Top - screenH) {
                smallNav[0].classList.add('up');
