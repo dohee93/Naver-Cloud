@@ -561,7 +561,7 @@ header .header-container {
       background-color: #fff;
       display: block;
       position: absolute;
-      z-index: 100;
+      z-index: 99;
       margin-top: 0;
       transition-duration: 650ms;
 
