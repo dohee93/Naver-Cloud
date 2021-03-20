@@ -179,7 +179,13 @@ var section03Box = document.getElementById('s-section-03-box');
 var section04Box = document.getElementById('s-section-04-box');
 var section05Box = document.getElementById('s-section-05-box');
 var content01Top = document.getElementById('content01').offsetTop;
+var content02Top = document.getElementById('content02').offsetTop;
 var content03Top = document.getElementById('content03').offsetTop;
+
+var headerWrap = document.getElementsByClassName('header-container');
+var subHeader = document.getElementsByClassName('sub-header');
+var headerH = headerWrap[0].offsetHeight;
+var subheaderH = subHeader[0].offsetHeight;
 
 // Content02 - Section 01 ~ 05 Box의 top 위치 계산 
 var section01BoxTop = content02Top + section01Box.offsetTop - headerH - subheaderH - 200;

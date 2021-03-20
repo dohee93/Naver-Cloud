@@ -981,7 +981,7 @@
 .small-nav ol li a:hover{
    background-color:#f9f9f9
 }
-.small-nav .pagemove.active{
+.small-nav .nav-button.active{
    color:#fff;
    background-color:#1e1e1e
 }
