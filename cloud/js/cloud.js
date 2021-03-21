@@ -192,7 +192,7 @@ var section01BoxTop = content02Top + section01Box.offsetTop - headerH - subheade
 var section02BoxTop = content02Top + section02Box.offsetTop - headerH - subheaderH - 100;
 var section03BoxTop = content02Top + section03Box.offsetTop - headerH - subheaderH - 100;
 var section04BoxTop = content02Top + section04Box.offsetTop - headerH - subheaderH - 100;
-var section05BoxTop = content02Top + section05Box.offsetTop - headerH - subheaderH;
+var section05BoxTop = content02Top + section05Box.offsetTop - headerH - subheaderH - 100;
 var section05BoxBottom = content03Top;
 
 //해당 위치에 왔을 때, 각 버튼에 active 클래스 추가
@@ -322,7 +322,7 @@ function hasScrolled() {
 
          topLine[1].classList.remove('show');
          subHeader[1].style = "top: 0px; position: fixed; z-index: 90; transition-duration: 650ms;"
-         if(nowScrollTop > content02Top - 100 && nowScrollTop < content03Top - screenH) {
+         if(nowScrollTop > content02Top - 100 && nowScrollTop < content03Top - screenH + headerH) {
             smallNav[0].classList.add('down');
             smallNav[0].classList.remove('up');
             smallNav[0].classList.add('visible');
@@ -347,7 +347,7 @@ function hasScrolled() {
 
             
 
-            if(nowScrollTop > content02Top - 100 && nowScrollTop < content03Top - screenH ) {
+            if(nowScrollTop > content02Top - 100 && nowScrollTop < content03Top - screenH + headerH ) {
                smallNav[0].classList.add('up');
                smallNav[0].classList.remove('down');
                smallNav[0].classList.add('visible');
