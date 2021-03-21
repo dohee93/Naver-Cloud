@@ -22,10 +22,15 @@
    <link rel="stylesheet" href="../css/footer.css">
    <link rel="stylesheet" href="css/cloud.css">
    <link rel="stylesheet" href="css/cloud_m.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
    <script src="js/cloud.js" defer></script>
    <script src="../js/footer.js" defer></script>
    <script src="js/header.js" defer></script>
+   
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <body class="fp-viewing">
@@ -1641,9 +1646,10 @@
                      </em>
                   </h2>
                   
-                  <div class="slide-wrap" id="cloud-slide01">
-                     <ul class="slide-container">
-                        <li class="slide01">
+                  <div class="swiper-container" id="cloud-slide01">
+                     <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                           <div class="swiper">
                            <img src="img/m_cloud_cont01.jpg" alt>
                            <div class="mid-table-child">
                               <strong>브레인리스 로봇</strong>
@@ -1651,8 +1657,10 @@
                                  5G와 클라우드 기술을 활용하여 CPU가 아닌, 클라우드가 곧 로봇의 브레인이 되어 고성능 자율주행 로봇의 대중화를 이끕니다.
                               </p>
                            </div>
+                           </div>
                         </li>
-                        <li class="slide01">
+                        <li class="swiper-slide">
+                           <div class="swiper">
                            <img src="img/m_cloud_cont06.jpg" alt>
                            <div class="mid-table-child">
                               <strong>AI 컨택 센터</strong>
@@ -1660,8 +1668,10 @@
                                  음성 인식・합성, 자연어 처리, 챗봇 등의 기술이 적용된 AI 컨택 센터를 통해 상담사의 고객 상담 업무를 효율화하고 고객은 더 빠른 지원을 받을 수 있습니다.
                               </p>
                            </div>
+                        </div>
                         </li>
-                        <li class="slide01">
+                        <li class="swiper-slide">
+                           <div class="swiper">
                            <img src="img/m_cloud_cont05.jpg" alt>
                            <div class="mid-table-child">
                               <strong>스마트 산업 혁신</strong>
@@ -1669,8 +1679,10 @@
                                  원격 드론 관제 시스템을 활용한 건설 현장 관리, IoT와 빅데이터 기술이 적용된 스마트 팩토리 혁신도 클라우드와 함께 합니다.
                               </p>
                            </div>
+                        </div>
                         </li>
-                        <li class="slide01">
+                        <li class="swiper-slide">
+                           <div class="swiper">
                            <img src="img/m_cloud_cont04.jpg" alt>
                            <div class="mid-table-child">
                               <strong>엣지 컴퓨팅</strong>
@@ -1678,8 +1690,10 @@
                                  고객과 가까운 곳에 작은 클라우드 데이터 센터를 구축하여 클라우드 기반의 엣지 컴퓨팅을 실현합니다. 초저지연 시대는 클라우드 위에서 열립니다.
                               </p>
                            </div>
+                        </div>
                         </li>
-                        <li class="slide01">
+                        <li class="swiper-slide">
+                           <div class="swiper">
                            <img src="img/m_cloud_cont02.jpg" alt>
                            <div class="mid-table-child">
                               <strong>비대면 교육</strong>
@@ -1687,8 +1701,10 @@
                                  유연한 확장이 가능한 클라우드를 통해 수백만 명의 동시 접속에도 안정적인 교육 콘텐츠 제공이 가능하며, 웨일 스페이스 등을 활용하여 보다 효과적인 비대면 학습 관리가 가능해졌습니다.
                               </p>
                            </div>
+                        </div>
                         </li>
-                        <li class="slide01">
+                        <li class="swiper-slide">
+                           <div class="swiper">
                            <img src="img/m_cloud_cont03.jpg" alt>
                            <div class="mid-table-child">
                               <strong>차세대 헬스케어</strong>
@@ -1696,10 +1712,11 @@
                                  챗봇을 활용한 비대면 예약은 물론, 정밀의료 병원정보시스템의 빅데이터를 통해 진료와 진단을 지원해주는 AI 의사까지 현실이 됩니다.
                               </p>
                            </div>
+                        </div>
                         </li>
                      </ul>
                      <div class="swiper-pagination swiper-pagination-bullets">
-                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                        <span class="swiper-pagination-bullet"></span>
                         <span class="swiper-pagination-bullet"></span>
                         <span class="swiper-pagination-bullet"></span>
                         <span class="swiper-pagination-bullet"></span>
@@ -1753,6 +1770,10 @@
             
             <div class="section" id="content02">
                <div class="skill-cont">
+
+
+                  
+                  <!-- m Section 02 - 1  -->
                   <div class="skill-section s-section" id="s-section-01-box">
                      <div class="tit-box">
                         <span>Cloud Service</span>
@@ -1767,51 +1788,53 @@
                            <em>를 제공합니다</em>
                         </h3>
                      </div>
-                     
-
-
-                     <!-- m Section 02 - 1  -->
-
                      <div class="section-01-cont">
-                        <div class="slide-wrap" id="cloud-slide02">
-                           <ul class="slide-container">
-                              <li class="slide02">
-                                 <img src="img/m_skill_ing01.jpg" alt>
-                                 <div class="mid-table-child">
-                                    <p>
-                                       네이버 클라우드 플랫폼
-                                       <em>은 개인과 창작자는 물론, 스타트업, 중소기업, 엔터프라이즈까지 모든 비즈니스와 산업에 필요한 다양한 클라우드 서비스를 제공하고 있습니다.</em>
-                                    </p>
-                                    <a href="https://www.ncloud.com/?language=ko-KR" target="_blank">
-                                       네이버 클라우드 플랫폼 바로가기
-                                    </a>
+                        <div class="swiper-container" id="cloud-slide02">
+                           <ul class="swiper-wrapper">
+                              <li class="swiper-slide">
+                                 <div class="swiper">
+                                    <img src="img/m_skill_ing01.jpg" alt>
+                                    <div class="mid-table-child">
+                                       <p>
+                                          네이버 클라우드 플랫폼
+                                          <em>은 개인과 창작자는 물론, 스타트업, 중소기업, 엔터프라이즈까지 모든 비즈니스와 산업에 필요한 다양한 클라우드 서비스를 제공하고 있습니다.</em>
+                                       </p>
+                                       <a href="https://www.ncloud.com/?language=ko-KR" target="_blank">
+                                          네이버 클라우드 플랫폼 바로가기
+                                       </a>
+                                    </div>
                                  </div>
                               </li>
-                              <li class="slide02">
-                                 <img src="img/m_skill_ing02.jpg" alt>
-                                 <div class="mid-table-child">
-                                    <p>
-                                       네이버클라우드의 공공 전용 클라우드
-                                       <em>는 엄격한 공공기관의 심의 요건을 충족하고, 다수의 보안 인증으로 그 안정성을 입증했습니다. 이제 전국민 대상의 공공 서비스도 네이버 클라우드 플랫폼과 함께 하세요.</em>
-                                    </p>
-                                    <a href="https://www.gov-ncloud.com/" target="_blank">
-                                       공공 전용 클라우드 서비스 바로가기
-                                    </a>
+                              <li class="swiper-slide">
+                                 <div class="swiper">
+                                    <img src="img/m_skill_ing02.jpg" alt>
+                                    <div class="mid-table-child">
+                                       <p>
+                                          네이버클라우드의 공공 전용 클라우드
+                                          <em>는 엄격한 공공기관의 심의 요건을 충족하고, 다수의 보안 인증으로 그 안정성을 입증했습니다. 이제 전국민 대상의 공공 서비스도 네이버 클라우드 플랫폼과 함께 하세요.</em>
+                                       </p>
+                                       <a href="https://www.gov-ncloud.com/" target="_blank">
+                                          공공 전용 클라우드 서비스 바로가기
+                                       </a>
+                                    </div>
                                  </div>
                               </li>
-                              <li class="slide02">
-                                 <img src="img/m_skill_ing03.jpg" alt>
-                                 <div class="mid-table-child">
-                                    <p>
-                                       네이버클라우드의 의료 전용 클라우드
-                                       <em>는 ISMS, CSA STAR, ISO 27799 등 국내외 보안인증을 보유한 안전한 클라우드 서비스를 제공합니다. 의료기관 및 헬스케어 서비스에 최적화된 클라우드 컴퓨팅 파워와 AI 서비스를 통해 다양한 의료 서비스 제공이 가능합니다.</em>
-                                    </p>
-                                    <a href="https://www.ncloud.com/medicalCloudService?language=ko-KR" target="_blank">
-                                       의료 전용 클라우드 서비스 바로가기
-                                    </a>
+                              <li class="swiper-slide">
+                                 <div class="swiper">
+                                    <img src="img/m_skill_ing03.jpg" alt>
+                                    <div class="mid-table-child">
+                                       <p>
+                                          네이버클라우드의 의료 전용 클라우드
+                                          <em>는 ISMS, CSA STAR, ISO 27799 등 국내외 보안인증을 보유한 안전한 클라우드 서비스를 제공합니다. 의료기관 및 헬스케어 서비스에 최적화된 클라우드 컴퓨팅 파워와 AI 서비스를 통해 다양한 의료 서비스 제공이 가능합니다.</em>
+                                       </p>
+                                       <a href="https://www.ncloud.com/medicalCloudService?language=ko-KR" target="_blank">
+                                          의료 전용 클라우드 서비스 바로가기
+                                       </a>
+                                    </div>
                                  </div>
                               </li>
-                              <li class="slide02">
+                              <li class="swiper-slide">
+                                 <div class="swiper">
                                  <img src="img/m_skill_ing04.jpg" alt>
                                  <div class="mid-table-child">
                                     <p>
@@ -1821,18 +1844,20 @@
                                     <a href="https://www.fin-ncloud.com/" target="_blank">
                                        금융 전용 클라우드 서비스 바로가기
                                     </a>
-                                 </div>
+                                 </div></div>
                               </li>
-                              <li class="slide02">
-                                 <img src="img/m_skill_ing02.jpg" alt>
-                                 <div class="mid-table-child">
-                                    <p>
-                                       네이버 MYBOX
-                                       <em>는 개인 사용자를 위한 클라우드 스토리지 서비스입니다. 국내 최대 용량인 30GB를 기본적으로 지원하며 사진과 문서 자료를 안전하게 보관하고 관리할 수 있습니다. 강력한 사진 정리 기능과 편리한 감상, 문서 조회와 편집 및 공유 기능 등을 제공합니다.</em>
-                                    </p>
-                                    <a href="https://cloud.naver.com/" target="_blank">
-                                       네이버 MYBOX 서비스 바로가기
-                                    </a>
+                              <li class="swiper-slide">
+                                 <div class="swiper">
+                                    <img src="img/m_skill_ing02.jpg" alt>
+                                    <div class="mid-table-child">
+                                       <p>
+                                          네이버 MYBOX
+                                          <em>는 개인 사용자를 위한 클라우드 스토리지 서비스입니다. 국내 최대 용량인 30GB를 기본적으로 지원하며 사진과 문서 자료를 안전하게 보관하고 관리할 수 있습니다. 강력한 사진 정리 기능과 편리한 감상, 문서 조회와 편집 및 공유 기능 등을 제공합니다.</em>
+                                       </p>
+                                       <a href="https://cloud.naver.com/" target="_blank">
+                                          네이버 MYBOX 서비스 바로가기
+                                       </a>
+                                    </div>
                                  </div>
                               </li>
                            </ul>
@@ -1922,29 +1947,29 @@
                         </h3>
                      </div>
                      <div class="section-03-cont">
-                        <div class="slide-wrap" id="cloud-slide03">
-                           <ul class="slide-container">
-                              <li class="slide03">
+                        <div class="swiper-container" id="cloud-slide03">
+                           <ul class="swiper-wrapper">
+                              <li class="swiper-slide">
                                  <img src="img/skill_ing07.jpg" alt="데이터 센터 전경 이미지">
                               </li>
-                              <li class="slide03">
+                              <li class="swiper-slide">
                                  <img src="img/skill_ing07_1.jpg" alt="데이터 센터 도면 이미지">
                               </li>
-                              <li class="slide03">
+                              <li class="swiper-slide">
                                  <img src="img/skill_ing07_2.jpg" alt="데이터 센터 전경 이미지">
                               </li>
-                              <li class="slide03">
+                              <li class="swiper-slide">
                                  <img src="img/skill_ing07_3.jpg" alt="데이터 센터 내부 서버실 이미지">
                               </li>
-                              <li class="slide03">
+                              <li class="swiper-slide">
                                  <img src="img/skill_ing07_4.jpg" alt="데이터 센터 내부 이미지">
                               </li>
-                              <li class="slide03">
+                              <li class="swiper-slide">
                                  <img src="img/skill_ing07_5.jpg" alt="데이터 센터 내부 이미지">
                               </li>
                            </ul>
                            <div class="swiper-pagination swiper-pagination-bullets">
-                              <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                              <span class="swiper-pagination-bullet"></span>
                               <span class="swiper-pagination-bullet"></span>
                               <span class="swiper-pagination-bullet"></span>
                               <span class="swiper-pagination-bullet"></span>

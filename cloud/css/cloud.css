@@ -464,7 +464,8 @@
 .slide-wrap {
    position: relative;
    width: 100%;
-   height: 70vh;
+   max-height: 636px;
+   height: 636px;
    overflow: hidden;
    display: block;
 }
@@ -493,6 +494,7 @@
 .slide.animated {
    animation: 0.8s moveshow ease-out forwards;
 }
+
 
 /* Slide Bottom Box CSS */
 

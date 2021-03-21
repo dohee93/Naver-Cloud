@@ -178,9 +178,9 @@ var section02Box = document.getElementById('s-section-02-box');
 var section03Box = document.getElementById('s-section-03-box');
 var section04Box = document.getElementById('s-section-04-box');
 var section05Box = document.getElementById('s-section-05-box');
-var content01Top = document.getElementById('content01').offsetTop;
+var content01Top = document.getElementById('title01').offsetTop;
 var content02Top = document.getElementById('content02').offsetTop;
-var content03Top = document.getElementById('content03').offsetTop;
+var content03Top = document.getElementById('title03').offsetTop;
 
 var headerWrap = document.getElementsByClassName('header-container');
 var subHeader = document.getElementsByClassName('sub-header');
@@ -188,11 +188,11 @@ var headerH = headerWrap[0].offsetHeight;
 var subheaderH = subHeader[0].offsetHeight;
 
 // Content02 - Section 01 ~ 05 Box의 top 위치 계산 
-var section01BoxTop = content02Top + section01Box.offsetTop - headerH - subheaderH - 200;
-var section02BoxTop = content02Top + section02Box.offsetTop + screenH - headerH - subheaderH;
-var section03BoxTop = content02Top + section03Box.offsetTop + screenH - headerH - subheaderH;
-var section04BoxTop = content02Top + section04Box.offsetTop + screenH - headerH - subheaderH;
-var section05BoxTop = content02Top + section05Box.offsetTop + screenH - headerH - subheaderH;
+var section01BoxTop = content02Top + section01Box.offsetTop - headerH - subheaderH - 100;
+var section02BoxTop = content02Top + section02Box.offsetTop - headerH - subheaderH - 100;
+var section03BoxTop = content02Top + section03Box.offsetTop - headerH - subheaderH - 100;
+var section04BoxTop = content02Top + section04Box.offsetTop - headerH - subheaderH - 100;
+var section05BoxTop = content02Top + section05Box.offsetTop - headerH - subheaderH;
 var section05BoxBottom = content03Top;
 
 //해당 위치에 왔을 때, 각 버튼에 active 클래스 추가
@@ -225,10 +225,16 @@ function smallNavPos(pos) {
    }
 }
 
+console.log(section02BoxTop);
+
 window.addEventListener('scroll', function(){
    var scrollTop = window.pageYOffset;
+   console.log(scrollTop);
    smallNavPos(scrollTop);
    subHeaderPos(scrollTop);
+   if(scrollTop == section02BoxTop) {
+      console.log(yes);
+   }
 });
 
 for(var i = 0; i < navButtons.length; i++){
@@ -244,7 +250,7 @@ function navClick(ev){
             window.scrollTo({top:section01BoxTop + 200, behavior: 'smooth'});
             break;
          case 1:
-            window.scrollTo({top:section02BoxTop + 200, behavior: 'smooth'});
+            window.scrollTo({top:section02BoxTop, behavior: 'smooth'});
             break;
          case 2:
             window.scrollTo({top:section03BoxTop + 200, behavior: 'smooth'});
@@ -264,6 +270,128 @@ function navClick(ev){
 // ----- Small Navigation JS
 
 
+// Small Navigation JS
+// Header & Section Menu Fixed JS
+var content02Top = document.getElementById('content02').offsetTop;
+var smallNav = document.getElementsByClassName('small-nav');
+var content02Height = document.getElementById('content02').offsetHeight;
+
+var lastScrollTop = 0;
+var delta = 5;
+var fixBox = document.getElementsByClassName('sub-header');
+var fixBox1 = fixBox[0];
+var fixBox1Top = fixBox1.offsetTop;
+var fixBox1Height = fixBox1.offsetHeight;
+
+var didScroll;
+
+var headerWrap = document.getElementsByClassName('header-container');
+var topLine = document.querySelectorAll('#top-line');
+var subHeader = document.getElementsByClassName('sub-header');
+var headerH = headerWrap[0].offsetHeight;
+var subheaderH = subHeader[0].offsetHeight;
+
+window.onscroll = function(e) {
+   didScroll = true;
+   
+};
+
+//0.25초마다 스크롤 여부 체크, hasScrolled() 함수 호출
+setInterval(function(){
+   if(didScroll){
+      hasScrolled();
+      didScroll = false;
+   }
+}, 250);
+
+function hasScrolled() {
+   var nowScrollTop = window.pageYOffset;
+   var pageH = window.pageYOffset;
+   // console.log(nowScrollTop);
+   if(Math.abs(lastScrollTop - nowScrollTop) <= delta) {
+      return;
+   }
+   
+   if(nowScrollTop > 200) {
+      if(nowScrollTop > lastScrollTop && nowScrollTop > fixBox1Height) {
+         //scroll down
+
+         headerWrap[0].classList.add('hide');
+         topLine[0].classList.remove('show');
+         subHeader[0].style = "top: 0px; position: fixed; z-index: 90; transition-duration: 650ms;"
+
+         topLine[1].classList.remove('show');
+         subHeader[1].style = "top: 0px; position: fixed; z-index: 90; transition-duration: 650ms;"
+         if(nowScrollTop > content02Top - 100 && nowScrollTop < content03Top - screenH) {
+            smallNav[0].classList.add('down');
+            smallNav[0].classList.remove('up');
+            smallNav[0].classList.add('visible');
+         } else {
+            smallNav[0].classList.remove('visible');
+            smallNav[0].classList.remove('up');
+            smallNav[0].classList.remove('down');
+         }
+         
+
+
+      } else {
+         if(nowScrollTop + window.innerHeight < document.body.offsetHeight) {
+            //scroll up
+
+            headerWrap[0].classList.remove('hide');
+            topLine[0].classList.add('show');
+            subHeader[0].style = "top: 78px; position: fixed; z-index: 90; transition-duration: 650ms;"
+
+            topLine[1].classList.add('show');
+            subHeader[1].style = "top: 60px; position: fixed; z-index: 90; transition-duration: 650ms;"
+
+            
+
+            if(nowScrollTop > content02Top - 100 && nowScrollTop < content03Top - screenH ) {
+               smallNav[0].classList.add('up');
+               smallNav[0].classList.remove('down');
+               smallNav[0].classList.add('visible');
+            } else {
+               smallNav[0].classList.remove('visible');
+               smallNav[0].classList.remove('up');
+               smallNav[0].classList.remove('down');
+            }
+         }
+      } 
+   } else {
+      subHeader[0].style = "top: 392px;"
+      subHeader[1].style = "top: 276px;"
+      topLine[0].classList.remove('show');
+      topLine[1].classList.remove('show');
+      headerWrap[0].classList.remove('hide');
+   }
+   lastScrollTop = nowScrollTop;
+}
+
+console.log(screenH, section05BoxBottom, content03Top, section05BoxBottom - screenH);
+
+// ----- Header & Section Menu Fixed JS
+// ----- Small Navigation JS
+
+
+// 첫 화면
+// header-wrap  top : 0px;
+// top-line opacity: 1; top: 0px; position: absolute;
+// sub-header opacity: 1; top: 392px; position: absolute; z-index: 101; transition-duration: 650ms;
+
+// 스크롤 내렸을 때
+// header-wrap  top : -80px;
+// top-line opacity: 0; top: -82px; position: absolute;
+// sub-header opacity: 1; top: 0px; position: absolute; z-index: 101; transition-duration: 650ms;
+
+
+// 스크롤 올렸을 때
+// header-wrap  top : 0px;
+// top-line opacity: 1; top: 82px; position: absolute;
+// sub-header opacity: 1; top: 80px; position: absolute; z-index: 29; transition-duration: 650ms;
+
+
+
 
 var subButton = document.querySelectorAll('.sub-btn');
 var section01Top = document.getElementById('title01').offsetTop;
@@ -274,19 +402,20 @@ var technologyTop = document.getElementById('technology').offsetTop;
 var serviceTop = document.getElementById('service').offsetTop;
 
 
+
 function subClick(idx) {
    subButton[idx].addEventListener('click', function(ev){
       ev.preventDefault();
       
       switch(idx) {
          case 0:
-            window.scrollTo({top: section01Top + 500, behavior: 'smooth'});  
+            window.scrollTo({top: section01Top, behavior: 'smooth'});  
             break;
          case 1:
-            window.scrollTo({top: section02Top - subheaderH, behavior: 'smooth'});
+            window.scrollTo({top: section02Top , behavior: 'smooth'});
             break;
          case 2:
-            window.scrollTo({top: section03Top + screenH - subheaderH  , behavior: 'smooth'});
+            window.scrollTo({top: section03Top , behavior: 'smooth'});
             break;
          case 3 :
             window.scrollTo({top: visualTop, behavior: 'smooth'});  
@@ -295,7 +424,7 @@ function subClick(idx) {
             window.scrollTo({top: technologyTop + 100, behavior: 'smooth'});
             break;
          case 5:
-            window.scrollTo({top: serviceTop + screenH , behavior: 'smooth'});
+            window.scrollTo({top: serviceTop + 100, behavior: 'smooth'});
             break;
 
          default:
@@ -304,7 +433,7 @@ function subClick(idx) {
 
    });
 }
-
+console.log(subButton);
 for(var i = 0; i < subButton.length; i++) {
    subClick(i);
 }
@@ -318,12 +447,12 @@ function subHeaderPos(pos) {
    } else {
       subButton[0].classList.remove('active');
    }
-   if(pos >= section02Top - 100 && pos < section03Top + screenH - 100) {
+   if(pos >= section02Top - 100 && pos < section03Top - 100) {
       subButton[1].classList.add('active');
    } else {
       subButton[1].classList.remove('active');
    }
-   if(pos >= section03Top + screenH - 100) {
+   if(pos >= section03Top - 100  ) {
       subButton[2].classList.add('active');
    } else {
       subButton[2].classList.remove('active');
@@ -346,4 +475,9 @@ function subHeaderPos(pos) {
 }
 
 
-
+//Swiper Library 사용
+var swiper = new Swiper('.swiper-container', {
+   pagination: {
+     el: '.swiper-pagination',
+   },
+ });

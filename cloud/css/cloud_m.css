@@ -146,9 +146,6 @@
       height: 100%;
    } 
    /* Content01 767 */
-   .wrap.mo .m-cloud-wrap .section#content01.visible {
-      opacity: 1;
-   }
    .wrap.mo .m-cloud-wrap .section#content01 {
       padding: 40px 0;
       opacity: 1;
@@ -168,18 +165,20 @@
       letter-spacing: -.2px;
       font-style: normal;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .slide01 .mid-table-child {
-      border-radius: 0 0 12px 12px;
+   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .mid-table-child {
       background-color: #fafafa;
-      min-height: 200px;
+      border-radius: 0 0 12px 12px;
+      min-height: 248px;
       padding: 24px 20px;
+      position: relative;
+      width: 85vw;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .slide01 .mid-table-child strong {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .mid-table-child strong {
       font-size: 18px;
       line-height: 20px;
       color: #1e1e1e;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .slide01 .mid-table-child p {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .mid-table-child p {
       font-size: 14px;
       font-weight: 700;
       line-height: 24px;
@@ -187,55 +186,35 @@
       margin-top: 12px;
       word-break: keep-all;
    }   
-   /* .slide-wrap {
-      padding: 0 24px 32px 24px;
-      position: relative;
-      height: 65vh;
-      width: 85%;
-   }
-   .slide-container {
-      position: inherit;
-      width: 100%;
-      top: 0;
-      height: 100%;
-
-   }
-   .slide01 { 
-      margin-right: 24px;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      display:inline-block;
-      border: 1px solid red;
-
-   }
-   .slide02 { 
-      margin-right: 24px;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      display:inline-block;
-      border: 1px solid red;
-
-   }
-
-   .slide01 img,
-   .slide02 img {
-      width: 100%;
-      height: 100%;
+   #cloud-slide01 img {
       border-radius: 12px 12px 0 0;
-      display: inline-block;
+      width: 85vw;
+   }
+   
+   #cloud-slide01 {
+      padding: 0 24px 34px 14px;
+   }
+   
+
+   .swiper-slide {
+      width: 83.33333vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-property: transform;
    }
 
-   .wrap.mo .m-cloud-wrap .section #cloud-slide01 .swiper-container-horizontal>.swiper-pagination-bullets {
-      bottom: 0px;
+   .swiper-pagination-bullet-active {
+      opacity: 1;
+      background-color: #1e1e1e;
    }
-   .swiper-container-horizontal>.swiper-pagination-bullets {
-      bottom: 10px;
+   
+   .swiper-pagination-bullets {
+      bottom: -10px;
       left: 0;
       width: 100%;
    }
-   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+   .swiper-pagination-bullets .swiper-pagination-bullet{
       margin: 0 6px;
    }
    .swiper-pagination-bullet {
@@ -252,7 +231,7 @@
       transition: .3s opacity;
       transform: translate3d(0,0,0);
       z-index: 10;
-   } */
+   } 
 
    /* technology 767 */
    .wrap.mo .m-cloud-wrap .section.technology-tit,
@@ -279,15 +258,11 @@
    /* Content02 767 */
    .wrap.mo .m-cloud-wrap .section#content02 .skill-cont .skill-section {
       padding-bottom: 40px;
-      /* opacity: 0; */
       transition: .8s;
    }
    .wrap.mo .m-cloud-wrap .section#content02 .skill-cont .skill-section .tit-box {
       padding: 40px 24px 20px;
    }
-   /* .wrap.mo .m-cloud-wrap .section#content02 .skill-cont .skill-section:nth-child(1) .tit-box span {
-      padding: 0;
-   } */
    .wrap.mo .m-cloud-wrap .section#content02 .skill-cont .skill-section .tit-box span {
       font-size: 18px;
       color: #03c75a;
@@ -310,34 +285,37 @@
       color: #aaa;
       font-style: normal;
    }
+   #cloud-slide02 {
+      padding: 0 24px 34px 14px;
+   }
    
-   /* .wrap.mo .m-cloud-wrap .section #cloud-slide02 .swiper-slide img {
+   #cloud-slide02 img {
       border-radius: 12px 12px 0 0;
-      width: 100%;
-   } */
-   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .slide02 .mid-table-child {
+      width: 85vw;
+   }
+   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .mid-table-child {
       background-color: #fafafa;
       border-radius: 0 0 12px 12px;
       min-height: 248px;
       padding: 24px 20px;
       position: relative;
-      width: 100%;
+      width: 85vw;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .slide02 .mid-table-child p {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .mid-table-child p {
       font-size: 14px;
       font-weight: 700;
       line-height: 24px;
       color: #1e1e1e;
       word-break: keep-all;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .slide02 .mid-table-child p em {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .mid-table-child p em {
       font-size: 14px;
       line-height: 24px;
       color: #aaa;
       word-break: keep-all;
       font-style: normal;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .slide02 .mid-table-child a {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .mid-table-child a {
       font-size: 14px;
       line-height: 16px;
       color: #03c75a;
@@ -347,7 +325,7 @@
       font-weight: 700;
       transition: .3s;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .slide02 .mid-table-child a:after {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide02 .mid-table-child a:after {
       content: '';
       width: 12px;
       height: 12px;
@@ -380,25 +358,17 @@
       color: #aaa;
       font-style: normal;
    }
-
-   .slide03 { 
-      position: absolute;
-      width: 100%;
-      top: 0;
-      text-align: center;
-      overflow: hidden;
-      opacity: 1;
-   }
    
    .wrap.mo .m-cloud-wrap .section #cloud-slide03 {
       width: 100%;
-      height: 45vh;
+      height: 100%;
       padding: 0 0 56px 24px;
    }
-   .wrap.mo .m-cloud-wrap .section #cloud-slide03 .slide03 img {
+   .wrap.mo .m-cloud-wrap .section #cloud-slide03 img {
       border-radius: 6px;
-      width: 100%;
+      width: 85vw;
       height: 100%;
+      margin: 0 auto;
       display: inline-block;
    }
    .wrap.mo .m-cloud-wrap .skill-section#s-section-03-box .txt-box {
