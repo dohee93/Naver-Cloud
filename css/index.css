@@ -882,13 +882,13 @@
 
 @media screen and (max-width: 1024px) {
     #top-btn {
-        width: 48px;
-        height: 48px;
-        background: url(../img/m/mo_top_btn.png) no-repeat center;
-        background-size: cover;
-        bottom: 30px;
-        right: 30px;
-     }
+      width: 48px;
+      height: 48px;
+      background: url(../img/mo_top_btn.png) no-repeat center;
+      background-size: cover;
+      bottom: 30px;
+      right: 30px;
+   }
     /* Hero 메인 비주얼 부분 */
     .slide_1 .cont_box {
         padding: 0 30px;
