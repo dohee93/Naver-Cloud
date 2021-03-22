@@ -1,26 +1,117 @@
 
 
+
+
 // 기업소개 pictogram box
-const moreBtn = document.querySelector('.moreBtn');
-const menu = document.querySelector('.menu_block');
+// const moreBtn = document.querySelector('.moreBtn');
+// const menu = document.querySelector('.menu_block');
 
 
-moreBtn.addEventListener('click', ( ) => {
+// moreBtn.addEventListener('click', ( ) => {
 
-    menu.classList.toggle('actives');
-    moreBtn.classList.toggle('clicked');
+//     menu.classList.toggle('actives');
+//     moreBtn.classList.toggle('clicked');
 
- });
- 
+//  });
+
+const accordion = document.querySelectorAll('.content_box');
+
+
+ // 다른 accordion 클릭시 닫혀이지 않은 코드
+// 조건은 accordion.length(갯수) 미만으로 반복
+for(i = 0;  i < accordion.length; i++){
+    accordion[i].addEventListener('click', function(){
+        this.classList.toggle('active'); // 내가 클릭한 그것(accordion)을 토글
+
+    });
+}
+
+const accordionGlobal = document.querySelectorAll('.maplink');
+
+for(i = 0; i < accordionGlobal.length; i++ ){
+    accordionGlobal[i].addEventListener('click', function(){
+        this.classList.toggle('active');
+    });
+}
+
+
+
+
+
+
 
 
 //  swiper
+document.querySelector('.btn1').addEventListener('click', function(){
+    document.querySelector('.swiper-wrapper').style.transform = 'translate(0)';
+ });
 document.querySelector('.btn2').addEventListener('click', function(){
-   document.querySelector('.swiper-wrapper').style.transform = 'translate(-100vw)';
+    document.querySelector('.swiper-wrapper').style.transform = 'translate(calc(-79vw - 24px))';
 });
 document.querySelector('.btn3').addEventListener('click', function(){
-    document.querySelector('.swiper-wrapper').style.transform = 'translate(-200vw)';
+    document.querySelector('.swiper-wrapper').style.transform = 'translate(calc(-158vw - 48px))';
  });
+ 
+ 
+ 
+ 
+//  const pagerBtn = document.querySelectorAll('.swiper-pagination-bullet');
+ 
+//  // pager 로 슬라이드 이동하기
+//  // 배열로 들어오고 있으니 반복문 사용
+//  for(var x = 0;  x < pagerBtn.length; x++){// x가 pagerBtn 보다 작을 때 까지 1씩 더해서 실행
+    
+//     // pagerBtn 들 마다 할 일 작성
+//     // pagerBtn 들의 순번 [x]으로 해서 클릭하면 이벤트 실행
+//     pagerBtn[x].addEventListener('click',function(event){
+//         //event는 요소 자체를 물고들어오기 위해
+//         //event 를 물고 들어와서 그녀석이 누구니?target
+//         console.log(event.target.innerText); // 내가 클릭한게 누구(target)인지? 여기서는 span
+//         // span 속성값(순번)을 가져와서   goToSlide()에 그 값을 넣어줘야 내가 어떤걸 클릭했는지 알 수 있다
+
+//         /* bxSlider
+//         기본 위치값은 CSS 에서 설정해야 한다.
+//         모바일에서만 터치
+//         bxSlider 메서드 - goToSlide(0)
+//         인덱스 번호로 슬라이드하기
+//         goToSlide 에다가 숫자를 넘겨주면 된다
+//         즉 사용자가 원하는(클릭) 숫자를 넘겨주면 된다
+//         */
+//           // Attribute(속성) 여기서는 data-idx 가 속성이다
+//         // get(가져오다), set(바꾸다), has(있는지 없는지)
+//         // getAttribute 속성을 가져오다
+//     //    var pageNum = event.target.getAttribute('data-idx');
+//        var pageNum = event.target.innerText - 1;
+//                                 // span 속성값을 가져와서 pageNum 변수에 저장
+//        goToSlide(pageNum);  // span 속성값을 즉 인덱스 번호를 goToSlide에다 넘겨주다
+       
+//        for(var y = 0; y < pagerBtn.length; y++){
+//             pagerBtn[y].classList.remove('swiper-pagination-bullet-active');    
+//        }
+//        event.target.classList.add('swiper-pagination-bullet-active');
+//     });
+     
+//  }
+ 
+ document.querySelector('#info_slide05 .btn001').addEventListener('click', function(){
+    document.querySelector('#info_slide05 .swiper-wrapper').style.transform = 'translate(0)';
+    // 모든 swiper-pagination-bullet 에 active 제거, 클릭 한 그 요소에만 active 추가
+    
+    
+ });
+document.querySelector('#info_slide05 .btn002').addEventListener('click', function(){
+    document.querySelector('#info_slide05 .swiper-wrapper').style.transform = 'translate(calc(-79vw - 24px))';
+});
+document.querySelector('#info_slide05 .btn003').addEventListener('click', function(){
+    document.querySelector('#info_slide05 .swiper-wrapper').style.transform = 'translate(calc(-158vw - 48px))';
+ });
+ document.querySelector('#info_slide05 .btn004').addEventListener('click', function(){
+    document.querySelector('#info_slide05 .swiper-wrapper').style.transform = 'translate(calc(-237vw - 72px))';
+});
+document.querySelector('#info_slide05 .btn005').addEventListener('click', function(){
+    document.querySelector('#info_slide05 .swiper-wrapper').style.transform = 'translate(calc(-316vw - 96px))';
+ });
+ 
  
  
  
@@ -98,6 +189,7 @@ Top.addEventListener('click', function(e){
 
 
 // 주요 연혁 슬라이드
+
 document.querySelector('.button-prev').addEventListener('click', function(){
     document.querySelector('.con').style.transform = 
     'translate(0)';
@@ -106,6 +198,7 @@ document.querySelector('.button-next').addEventListener('click', function(){
     document.querySelector('.con').style.transform = 
     'translate(-90vw)';
 });
+
 
 
 
