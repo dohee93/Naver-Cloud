@@ -1,7 +1,3 @@
-
-
-
-
 // 기업소개 pictogram box
 // const moreBtn = document.querySelector('.moreBtn');
 // const menu = document.querySelector('.menu_block');
