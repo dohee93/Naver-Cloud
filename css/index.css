@@ -1,4 +1,4 @@
-/*  top scroll 버튼 */
+ /* top scroll 버튼
 #top-btn {
     background-image: url(../img/top_btn.png);
     background-size: contain;
@@ -18,7 +18,30 @@
 
 #top-btn.visible {
     opacity: 1;
-}
+} */
+
+
+
+/* Top Button CSS */
+#top-btn {
+    display: none;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    color: transparent;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../img/top_btn.png) no-repeat center;
+    background-size: cover;
+    z-index: 10;
+    transition: .3s;
+ }
+ #top-btn:hover {
+    background-image: url(../img/top_btn_hover.png);
+ }
 
 
 /* Hero MainVisual CSS */
@@ -272,7 +295,7 @@
     padding: 142px 90px 152px;
     margin: 0 auto;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .introduce_cont .eyebrow {
@@ -342,7 +365,7 @@
 .cont_box_left {
     padding: 190px 0;
     width: 50%;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .cont_box_left .eyebrow {
@@ -371,7 +394,7 @@
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 /* Mobile 롤링 이미지 애니메이션 부분 display: none */
@@ -858,6 +881,14 @@
 
 
 @media screen and (max-width: 1024px) {
+    #top-btn {
+        width: 48px;
+        height: 48px;
+        background: url(../img/m/mo_top_btn.png) no-repeat center;
+        background-size: cover;
+        bottom: 30px;
+        right: 30px;
+     }
     /* Hero 메인 비주얼 부분 */
     .slide_1 .cont_box {
         padding: 0 30px;

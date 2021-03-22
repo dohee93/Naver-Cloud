@@ -9,6 +9,11 @@ var aniEle03Y = document.querySelector('#section_3').offsetTop;
 
 var aniEle04Y = document.querySelector('#section_4').offsetTop;
 
+
+window.addEventListener('scroll', function(){
+  scrollEvent();
+});
+
 function scrollEvent() {
 
     windowScrollY = window.pageYOffset;
@@ -35,3 +40,5 @@ function scrollEvent() {
     }
 
  }
+
+ 

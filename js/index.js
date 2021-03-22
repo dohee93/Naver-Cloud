@@ -47,33 +47,33 @@ window.addEventListener('scroll', function(){
 // END PC Header
 
 
-// top scroll
-var btt = document.getElementById('top-btn'),
-    docElem = document.documentElement,
-    offset,
-    scrollPos,//스크롤 양
-    docHeight;
+// // top scroll
+// var btt = document.getElementById('top-btn'),
+//     docElem = document.documentElement,
+//     offset,
+//     scrollPos,//스크롤 양
+//     docHeight;
 
 
-    //docHeight = docElem.scrollHeight;
-    docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
+//     //docHeight = docElem.scrollHeight;
+//     docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
 
-    if(docHeight != 'undefined'){
-      offset = docHeight / 4;
-    }
+//     if(docHeight != 'undefined'){
+//       offset = docHeight / 4;
+//     }
 
-    window.addEventListener('scroll', function(){
-       scrollPos = docElem.scrollTop;
-       console.log(scrollPos);
+//     window.addEventListener('scroll', function(){
+//        scrollPos = docElem.scrollTop;
+//        console.log(scrollPos);
 
-       btt.className = (scrollPos > offset) ? 'visible' : '';
-    });
+//        btt.className = (scrollPos > offset) ? 'visible' : '';
+//     });
 
-    btt.addEventListener('click',function(ev){
-      ev.preventDefault();//링크 본연의 기능을 막는다.
-      docElem.scrollTop = 0;
-      scrollToTop();
-    });
+//     btt.addEventListener('click',function(ev){
+//       ev.preventDefault();//링크 본연의 기능을 막는다.
+//       docElem.scrollTop = 0;
+//       scrollToTop();
+//     });
 
    //  function scrollToTop(){
    //    var scrollInterval = setInterval(function(){
@@ -109,3 +109,45 @@ var btt = document.getElementById('top-btn'),
 //   slides[slideIndex-1].style.display = "block";  
 
 // } 
+
+
+
+
+// Top Button JS
+var docElem = document.documentElement,
+   docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight),
+   offset,
+   scrollPos,
+   btt = document.getElementById('top-btn'),
+   mBtt = document.getElementById('mo-top-btn');
+
+if(docHeight != 'undefined') {
+   offset = window.innerHeight;
+}
+
+window.addEventListener('scroll', function() {
+   scrollPos = docElem.scrollTop;
+   btt.style.display = (scrollPos > offset) ? 'block': 'none';
+   mBtt.style.display = (scrollPos > offset) ? 'block': 'none';
+});
+
+btt.addEventListener('click', function(ev){
+   ev.preventDefault();
+   scrollToTop();
+});
+mBtt.addEventListener('click', function(ew){
+   ew.preventDefault();
+   scrollToTop();
+});
+
+function scrollToTop() {
+   var scrollInterval = setInterval(function(){ 
+      if(scrollPos != 0) {
+         window.scrollBy(0,-100);
+      } else {
+         clearInterval(scrollInterval);
+      }
+   }, 15);
+}
+// ----- Top Button JS 
+

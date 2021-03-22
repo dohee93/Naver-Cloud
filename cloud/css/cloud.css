@@ -1274,13 +1274,19 @@
       line-height: 1.65;
    }
    /* Top Button 1024 */
-   #top-btn {
+   #mo-top-btn {
+      display: none;
       width: 48px;
       height: 48px;
       background: url(../img/m/mo_top_btn.png) no-repeat center;
       background-size: cover;
-      bottom: 30px;
-      right: 30px;
+      text-indent: -9999px;
+      color: transparent;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 10;
+      transition: .3s;
    }
 
    #smallNav.small-nav {
