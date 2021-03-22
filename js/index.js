@@ -45,3 +45,67 @@ window.addEventListener('scroll', function(){
 });
 
 // END PC Header
+
+
+// top scroll
+var btt = document.getElementById('top-btn'),
+    docElem = document.documentElement,
+    offset,
+    scrollPos,//스크롤 양
+    docHeight;
+
+
+    //docHeight = docElem.scrollHeight;
+    docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
+
+    if(docHeight != 'undefined'){
+      offset = docHeight / 4;
+    }
+
+    window.addEventListener('scroll', function(){
+       scrollPos = docElem.scrollTop;
+       console.log(scrollPos);
+
+       btt.className = (scrollPos > offset) ? 'visible' : '';
+    });
+
+    btt.addEventListener('click',function(ev){
+      ev.preventDefault();//링크 본연의 기능을 막는다.
+      docElem.scrollTop = 0;
+      scrollToTop();
+    });
+
+   //  function scrollToTop(){
+   //    var scrollInterval = setInterval(function(){
+   //       if(scrollPos != 0){
+   //          window.scrollBy(0,-55);
+   //       }else{
+   //          clearInterval(scrollInterval);
+   //       }
+   //    }, 100);
+   // }
+
+
+
+
+
+   
+
+   var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.querySelector(".mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+
+} 

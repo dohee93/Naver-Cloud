@@ -1,3 +1,24 @@
+/*  top scroll 버튼 */
+#top-btn {
+    background-image: url(../img/top_btn.png);
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+#top-btn:hover {
+    background-image: url(../img/top_btn_hover.png);
+}
+
+#top-btn.visible {
+    opacity: 1;
+}
 
 
 /* Hero MainVisual CSS */
@@ -251,6 +272,7 @@
     padding: 142px 90px 152px;
     margin: 0 auto;
     text-align: center;
+    opacity: 0;
 }
 
 .introduce_cont .eyebrow {
@@ -320,6 +342,7 @@
 .cont_box_left {
     padding: 190px 0;
     width: 50%;
+    opacity: 0;
 }
 
 .cont_box_left .eyebrow {
@@ -342,13 +365,13 @@
 .cont_box_left h3 span {
     color: rgb(170, 170, 170);
 }
-
 /* PC 롤링 이미지 애니메이션 부분 CSS */
 .pc_cont_box_right {
     width: 50%;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
+    opacity: 0;
 }
 
 /* Mobile 롤링 이미지 애니메이션 부분 display: none */
