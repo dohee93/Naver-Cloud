@@ -1,0 +1,333 @@
+.media_header_container {
+    width: 100%;
+    height: auto;
+}
+
+.media_title {
+    padding: 80px 0 0 0;
+}
+
+.media_title h2 {
+    font-family: 'NanumSquare', 'Noto Sans KR', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.3;
+    line-height: 60px;
+    padding: 52px 0 41px 150px;
+    margin: 0 auto;
+}
+
+.media_list_wrap {
+    width: 100%;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.media_list {
+    display: flex;
+    padding: 0 150px;
+}
+
+.media_list li {
+    padding: 17px 0;
+}
+
+.media_list li a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3;
+    line-height: 20.8px;
+    color: rgb(170, 170, 170);
+    padding: 9px 32px;
+}
+
+.media_list li:nth-child(1) a:hover {
+    color: rgb(3, 199, 90);
+}
+
+.media_list li:nth-child(2) a:hover {
+    color: rgb(3, 199, 90);
+}
+
+.media_list li a.active {
+    background-color: rgb(3,199,90);
+    border-radius: 19px;
+    color: rgb(255,255,255);
+}
+
+
+/* 미디어 서브페이지 - 소셜미디어 CSS */
+.media_social_wrap {
+    width: 100%;
+    height: auto;
+}
+
+.media_social_content {
+    width: 100%;
+    height: auto;
+    max-width: 1476px;
+    padding: 60px 90px 120px;
+    margin: 0 auto;
+}
+
+.media_social_subtext {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -1px;
+    margin: 0 0 48px;
+}
+
+.media_social_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media_social_list li {
+    width: 23.1%;
+    margin-right: 2.5%;
+    margin-bottom: 32px;
+    position: relative;
+    border-radius: 24px;
+}
+
+.media_social_list li:nth-child(1) {
+    background-color: rgb(3, 199, 90);
+}
+
+.media_social_list li:nth-child(2) {
+    background-color: rgb(24, 119, 242);
+}
+
+.media_social_list li:nth-child(3) {
+    background-color: rgb(0, 222, 123);
+}
+
+.media_social_list li:nth-child(4) {
+    background-color: rgb(255, 0, 0);
+    margin-right: 0;
+}
+
+.media_social_list li:nth-child(5) {
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0;
+}
+
+.media_social_list li:nth-child(6) {
+    background-color: rgb(40, 103, 178);
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.media_social_list a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    padding: 20px; 
+}
+
+.media_social_list a .social_icon {
+    width: 72px;
+    height: 72px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.social_naver_blog .social_icon {
+    background-image: url(../img/sns_blog.png);
+}
+
+.social_facebook .social_icon {
+    background-image: url(../img/sns_facebook.png);
+}
+
+.social_naver_tv .social_icon {
+    background-image: url(../img/sns_navertv.png);
+}
+
+.social_youtube .social_icon {
+    background-image: url(../img/sns_youtube.png);
+}
+
+.social_medium .social_icon {
+    background-image: url(../img/sns_medium.png);
+}
+
+.social_linkedin .social_icon {
+    background-image: url(../img/sns_linkedin.png);
+}
+
+.media_social_list li a h6 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0 62px 0 32px;
+    bottom: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 20.8px;
+    color: rgb(255,255,255);
+}
+
+.media_social_list li a h6:after {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/outlink_icon_w.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: -2px;
+    right: 30px;
+    transition: all 0.3s;
+}
+
+.media_social_list li a:hover h6:after {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/outlink_icon_w_hover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: -2px;
+    right: 30px;
+}
+
+.pc-hide {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1596px) {
+    .media_title h2 {
+        width: 100%;
+        max-width: 1476px;
+        padding: 52px 90px 41px;
+    }
+
+    .media_list {
+        margin: 0 auto;
+        padding: 0 90px;
+        max-width: 1476px;
+    }
+ }
+
+
+
+ @media screen and (max-width: 1024px) {
+    .media_title {
+        padding: 60px 0 0 0;
+    }
+
+    .media_title h2 {
+        padding: 52px 30px 41px;
+    }
+
+    .media_list {
+        padding: 0 30px;
+    }
+
+    .media_list li a {
+        padding: 9px 20px;
+    }
+
+    /* 미디어 서브페이지 - 소셜미디어 CSS */
+
+    .media_social_content {
+        padding: 60px 30px 120px;
+    }
+
+    .media_social_list li {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 28px;
+    }
+
+    .media_social_list li:nth-child(2) {
+        margin-right: 0;
+    }
+ }
+
+
+ 
+ @media screen and (max-width: 767px) {
+    .media_title h2 {
+        padding: 16px 24px;
+        font-size: 28px;
+        line-height: 36.4px;
+    }
+
+    .media_list {
+        padding: 0 24px;
+    }
+
+    .media_list li {
+        padding: 12px 0;
+    }
+
+    .media_list li a {
+        padding: 10px 16px;
+        font-size: 14px;
+        line-height: 18.2px;
+    }
+
+    /* 미디어 서브페이지 - 소셜미디어 CSS */
+
+    .media_social_content {
+        padding: 24px 24px 64px;
+    }
+
+    .media_social_subtext {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0 0 24px;
+    }
+
+    .media_social_list li {
+        width: calc(50% - 8px);
+        margin-right: 16px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+    }
+
+    .media_social_list a {
+        min-height: 155px;
+        position: relative;
+    }
+
+    .media_social_list a .social_icon {
+        width: 54px;
+        height: 54px;
+        position: absolute;
+        right: 14px;
+        bottom: 16px;
+    }
+
+    .media_social_list li a h6 {
+        display: absolute;
+        padding: 0 20px;
+        top: 20px;
+        left: 0;
+    }
+
+    .media_social_list li a h6:after {
+        display: none;
+    }
+
+    .media_social_list li a:hover h6:after {
+        display: none;
+    }
+ }
+
+
+
+

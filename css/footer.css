@@ -382,3 +382,25 @@ footer .footer-cont.mo-foot .family-site.on ul {
    }
 
 }
+
+.pc.cloud footer {
+   display: block;
+}
+.mo.cloud footer {
+   display: none;
+}
+.clfix:before, .clfix:after {
+   line-height: 0;
+   display: table;
+   content: '';
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px){
+   .pc.cloud footer {
+       display: none;
+   }
+   .mo.cloud footer {
+      display: block;
+   }
+}
